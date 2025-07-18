@@ -1,0 +1,173 @@
+/* =====================================
+   🎨 PALETTE DE COULEURS — Personnelle
+===================================== */
+
+:root {
+    --color-primary: #1C2D49;       /* Space Cadet : titres, texte principal */
+    --color-background: #ECECEC;   /* Anti-Flash White : fond principal */
+    --color-accent: #FFC300;       /* Mikado Yellow : boutons, accents visuels */
+    --color-alert: #E05E42;        /* Cinnabar : hover, erreurs, interactions */
+    --color-light-grey: #DCDCDC;   /* Variante de fond pour cartes ou hover */
+    --color-white: #FFFFFF;
+  }
+  
+  /* =====================================
+     🅰️ POLICES — Google Fonts intégrées
+     (à insérer dans <head>)
+  ===================================== */
+  
+  /* À placer dans ton HTML :
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  */
+  body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    background-color: var(--color-background);
+    color: var(--color-primary);
+    line-height: 1.6;
+  }
+  
+  /* =====================================
+     🧱 STRUCTURE TYPOGRAPHIQUE
+  ===================================== */
+  
+  /* Titres principaux */
+  h1, h2, h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-top: 1.5em;
+  }
+  
+  /* Sous-titres */
+  h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    color: var(--color-primary);
+    margin-top: 1em;
+  }
+  
+  /* Paragraphes */
+  p {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--color-primary);
+  }
+  
+  /* Navigation */
+  nav {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+  
+  /* Boutons primaires */
+  .btn-primary {
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 0.5em 1em;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--color-alert);
+    color: var(--color-white);
+  }
+  
+  /* Boutons secondaires */
+  .btn-secondary {
+    background-color: var(--color-alert);
+    color: var(--color-white);
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-size: 0.875rem;
+    padding: 0.4em 0.8em;
+    border-radius: 20px;
+  }
+  
+  /* Légendes et info discrète */
+  .caption {
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 0.75rem;
+    opacity: 0.7;
+    font-style: italic;
+  }
+  
+  /* Citations ou mise en avant */
+  blockquote {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    font-size: 1.25rem;
+    margin: 1em 0;
+    padding-left: 1.5em;
+    border-left: 3px solid var(--color-accent);
+    color: var(--color-primary);
+  }
+  
+  /* Badges */
+  .badge {
+    display: inline-block;
+    background-color: var(--color-accent);
+    color: var(--color-primary);
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-radius: 999px;
+    padding: 0.25em 0.75em;
+  }
+  
+  /* Données / nombres */
+  .data-number {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+    font-size: 1.125rem;
+    color: var(--color-alert);
+  }
+  
+  /* Formulaires */
+  input, textarea, select {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  input::placeholder {
+    font-style: italic;
+    color: #aaa;
+  }
+  
+  label {
+    font-weight: 500;
+    display: block;
+    margin-bottom: 0.25em;
+  }
+  
+  /* Modales */
+  .modal {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-white);
+    color: var(--color-primary);
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+  }
