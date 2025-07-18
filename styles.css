@@ -298,4 +298,17 @@
           animation: none;
         }
       }
+      .liste-contact {
+        list-style: none;
+        padding-left: 0;
+      }
       
+      .liste-contact li {
+        margin-bottom: 10px;
+      }
+      
+      .liste-contact i {
+        margin-right: 8px;
+        color: #2c3e50;
+        width: 20px;
+      }
