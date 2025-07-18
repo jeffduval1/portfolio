@@ -38,7 +38,22 @@
         font-size: 32px;
         margin: 0;
     }
-
+    .nom-complet {
+        display: flex;
+        flex-direction: column; 
+        line-height: 0.8;
+        align-items: center; 
+      }
+      
+      /* À partir de 600px, une seule ligne */
+      @media (min-width: 600px) {
+        .nom-complet {
+          flex-direction: row;
+          justify-content: center;
+          /* gap: 0.5em;  */
+        }
+      }
+      
     nav {
         display: flex;
         justify-content: center;

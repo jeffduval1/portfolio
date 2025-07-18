@@ -33,9 +33,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const observerClair = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                toggle.classList.add('clair');
+                menuToggle.classList.add('clair');
             } else {
-                toggle.classList.remove('clair');
+                menuToggle.classList.remove('clair');
             }
         });
     }, { threshold: 0.5 });
@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', () => {
             rect.top < window.innerHeight * 0.5 &&
             rect.bottom > window.innerHeight * 0.5
         ) {
-            toggle.classList.add('clair');
+            menuToggle.classList.add('clair');
         }
     });
 
