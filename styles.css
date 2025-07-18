@@ -41,7 +41,7 @@
     .nom-complet {
         display: flex;
         flex-direction: column; 
-        line-height: 0.8;
+        line-height: 0.6;
         align-items: center; 
       }
       
@@ -50,6 +50,7 @@
         .nom-complet {
           flex-direction: row;
           justify-content: center;
+          gap:0.3rem;
         }
       }
       
@@ -312,3 +313,79 @@
         color: #2c3e50;
         width: 20px;
       }
+      .bloc-apropos {
+        font-size: 1.05rem;
+        line-height: 1.75;
+        max-width: 800px;
+        margin: auto;
+        color: var(--couleur-texte);
+    }
+    
+    .bloc-apropos p {
+        margin-bottom: 1.5rem;
+    }
+    
+    .bloc-apropos strong {
+        color: var(--couleur-principale);
+    }
+    .images-projet {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .images-projet figure {
+        margin: 0;
+    }
+    
+    .images-projet img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        display: block;
+    }
+    
+    .images-projet figcaption {
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 0.25rem;
+        text-align: center;
+    }
+    
+    .infos-projet {
+        text-align: left;
+    }
+    
+    .titre-projet {
+        font-family: var(--police-titres);
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .description-projet {
+        margin-bottom: 0.5rem;
+    }
+    
+    .techno-projet {
+        font-style: italic;
+        color: #555;
+        margin-bottom: 0.5rem;
+    }
+    
+    .liens-projet a {
+        text-decoration: none;
+        color: var(--couleur-principale);
+        font-weight: 600;
+    }
+    
+    .liens-projet a:hover {
+        text-decoration: underline;
+    }
+    
+    @media (min-width: 768px) {
+        .images-projet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+    

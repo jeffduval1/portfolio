@@ -45,9 +45,30 @@
   <main>
     <section id="projets" aria-labelledby="titre-projets" data-clair>
       <h2 id="titre-projets" class="section-titre">Mes projets</h2>
-      <div class="carte-projet">[Projet 1 – Titre, techno, description, lien]</div>
-      <div class="carte-projet">[Projet 2 – Titre, techno, description, lien]</div>
-      <div class="carte-projet">[Projet 3 – Titre, techno, description, lien]</div>
+    
+      <article class="carte-projet">
+        <div class="images-projet">
+          <figure>
+            <img src="https://picsum.photos/600/400?random=1" alt="Aperçu du projet XYZ - page d’accueil" loading="lazy">
+            <figcaption>Page d’accueil</figcaption>
+          </figure>
+          <figure>
+            <img src="https://picsum.photos/600/400?random=2" alt="Aperçu du projet XYZ - vue mobile du formulaire" loading="lazy">
+            <figcaption>Formulaire mobile</figcaption>
+          </figure>
+        </div>
+        <div class="infos-projet">
+          <h3 class="titre-projet">Nom du projet</h3>
+          <p class="description-projet">Petite description du projet : objectifs, contexte ou client fictif, points clés de ton travail.</p>
+          <p class="techno-projet"><strong>Technologies&nbsp;:</strong> HTML, CSS, JavaScript, Figma</p>
+          <p class="liens-projet">
+            <a href="#" target="_blank" rel="noopener">Voir le projet</a> ·
+            <a href="#" target="_blank" rel="noopener">Code source</a>
+          </p>
+        </div>
+      </article>
+    
+      <!-- Tu peux dupliquer l’article autant de fois que tu veux -->
     </section>
 
     <section id="competences" aria-labelledby="titre-competences" data-clair>
@@ -65,7 +86,15 @@
 
     <section id="a-propos" aria-labelledby="titre-apropos" data-clair>
       <h2 id="titre-apropos" class="section-titre">À propos</h2>
-      <p>[Texte de présentation à venir – parcours, style de travail, valeurs, etc.]</p>
+      <div class="bloc-apropos">
+        <p><strong>Je suis Jean-François Duval</strong>, intégrateur web passionné par le design intelligent, les technologies modernes et les solutions qui ont du sens.</p>
+    
+        <p>Mon parcours m’a appris à bâtir des interfaces cohérentes, à structurer du contenu avec précision, et à penser chaque projet comme une expérience. J’aime que le design soit clair, beau, mais surtout utile. Ce que je construis doit fonctionner simplement, et bien — pour tous les écrans, tous les contextes.</p>
+    
+        <p>J’ai un fort intérêt pour l’expérience utilisateur, l’animation fluide, les micro-interactions bien dosées, les composants soignés. Je m’appuie sur une base solide en <strong>HTML</strong>, <strong>CSS</strong> et <strong>JavaScript vanilla</strong>, que je fais évoluer avec curiosité : outils modernes, intégration d’IA, automatisation intelligente.</p>
+    
+        <p>Je cherche maintenant à contribuer à des projets tournés vers l’innovation, à la croisée du <strong>développement web</strong>, de l’<strong>UX design</strong> et de la <strong>technologie émergente</strong>. Avec sérieux, esprit d’équipe et une volonté constante d’apprendre.</p>
+      </div>
     </section>
 
     <section id="cv" aria-labelledby="titre-cv" data-clair>
