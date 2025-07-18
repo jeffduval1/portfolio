@@ -38,22 +38,23 @@
         font-size: 32px;
         margin: 0;
     }
+
     .nom-complet {
         display: flex;
-        flex-direction: column; 
+        flex-direction: column;
         line-height: 0.6;
-        align-items: center; 
-      }
-      
-      /* À partir de 600px, une seule ligne */
-      @media (min-width: 600px) {
+        align-items: center;
+    }
+
+    /* À partir de 600px, une seule ligne */
+    @media (min-width: 600px) {
         .nom-complet {
-          flex-direction: row;
-          justify-content: center;
-          gap:0.3rem;
+            flex-direction: row;
+            justify-content: center;
+            gap: 0.3rem;
         }
-      }
-      
+    }
+
     nav {
         display: flex;
         justify-content: center;
@@ -73,15 +74,18 @@
     }
 
     section {
-        padding: 2rem 1rem;
+        padding: 0.75rem 1rem;
         max-width: 1000px;
         margin: auto;
     }
 
     .section-titre {
         font-family: var(--police-titres);
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2.2rem;
+        color: var(--couleur-principale);
+        border-left: 5px solid var(--couleur-accent);
+        padding-left: 0.75rem;
+        margin-bottom: 1.5rem;
     }
 
     .profil-photo {
@@ -188,9 +192,11 @@
         transform: translateY(10px);
         animation: fadeInUp 0.6s ease forwards;
     }
+
     #menu.active {
         transform: translateX(0);
-      }
+    }
+
     #menu.active ul li:nth-child(1) {
         animation-delay: 0.1s;
     }
@@ -260,132 +266,228 @@
         text-decoration: underline;
     }
 
-    
+
 
     #overlay.active {
         opacity: 1;
         pointer-events: auto;
     }
+
     @media (min-width: 601px) {
+
         /* Masquer les éléments mobiles */
         #menuToggle,
         #closeMenu,
         #overlay {
-          display: none !important;
+            display: none !important;
         }
-      
+
         /* Style du menu horizontal */
         #menu {
-          all: unset;
-          display: flex;
-          justify-content: center;
-          background-color: white;
-          padding: 1rem 0;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-          position: sticky;
-          top: 0;
-          z-index: 10;
+            all: unset;
+            display: flex;
+            justify-content: center;
+            background-color: white;
+            padding: 1rem 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
-      
+
         #menu ul {
-          display: flex;
-          gap: 2rem;
+            display: flex;
+            gap: 2rem;
 
         }
-      
+
         #menu li {
-          opacity: 1;
-          transform: none;
-          animation: none;
+            opacity: 1;
+            transform: none;
+            animation: none;
         }
-      }
-      .liste-contact {
+    }
+
+    .liste-contact {
         list-style: none;
         padding-left: 0;
-      }
-      
-      .liste-contact li {
+    }
+
+    .liste-contact li {
         margin-bottom: 10px;
-      }
-      
-      .liste-contact i {
+    }
+
+    .liste-contact i {
         margin-right: 8px;
         color: #2c3e50;
         width: 20px;
-      }
-      .bloc-apropos {
+    }
+
+    .bloc-apropos {
         font-size: 1.05rem;
         line-height: 1.75;
         max-width: 800px;
         margin: auto;
         color: var(--couleur-texte);
     }
-    
+
     .bloc-apropos p {
         margin-bottom: 1.5rem;
     }
-    
+
     .bloc-apropos strong {
         color: var(--couleur-principale);
     }
+
     .images-projet {
         display: grid;
         grid-template-columns: 1fr;
         gap: 1rem;
         margin-bottom: 1rem;
     }
-    
+
     .images-projet figure {
         margin: 0;
     }
-    
+
     .images-projet img {
         width: 100%;
         height: auto;
         border-radius: 8px;
         display: block;
     }
-    
+
     .images-projet figcaption {
         font-size: 0.9rem;
         color: #666;
         margin-top: 0.25rem;
         text-align: center;
     }
-    
+
     .infos-projet {
         text-align: left;
     }
-    
+
     .titre-projet {
         font-family: var(--police-titres);
         font-size: 1.5rem;
         margin-bottom: 0.5rem;
     }
-    
+
     .description-projet {
         margin-bottom: 0.5rem;
     }
-    
+
     .techno-projet {
         font-style: italic;
         color: #555;
         margin-bottom: 0.5rem;
     }
-    
+
     .liens-projet a {
         text-decoration: none;
         color: var(--couleur-principale);
         font-weight: 600;
     }
-    
+
     .liens-projet a:hover {
         text-decoration: underline;
     }
-    
+
     @media (min-width: 768px) {
         .images-projet {
             grid-template-columns: repeat(2, 1fr);
         }
     }
-    
+    #apropos {
+        background: linear-gradient(135deg, #fdfbff 0%, #f0f4ff 100%);
+        padding: 2rem;
+        border-left: 8px solid var(--couleur-secondaire);
+        border-radius: 8px;
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+      }
+      
+      #apropos p {
+        line-height: 1.8;
+      }
+      
+      #apropos em,
+      #apropos strong {
+        color: var(--couleur-secondaire);
+        font-style: normal;
+        font-weight: bold;
+      }
+            
+      /* Formulaire contact */
+      #contact form {
+        background: linear-gradient(135deg, #ffffff, #f2f6ff);
+        padding: 1rem;
+        margin-bottom: 0.5rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      }
+      
+      #contact button {
+        background-color: var(--couleur-principale);
+        color: white;
+        font-weight: bold;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+      
+      #contact button:hover {
+        background-color: var(--couleur-secondaire);
+      }
+      .ctnForm{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .formulaire-contact input,
+.formulaire-contact textarea {
+  width: 100%;
+  max-width: 250px;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--police-texte);
+  background-color: #fff;
+  color: var(--couleur-texte);
+}
+
+.formulaire-contact textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formulaire-contact button {
+  width: fit-content;
+  padding: 0.6rem 1.2rem;
+  background-color: var(--couleur-principale);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-family: var(--police-titres);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.formulaire-contact button:hover {
+  background-color: var(--couleur-secondaire);
+}
+
+/* Responsive ajustement en grand format */
+@media (min-width: 601px) {
+  .formulaire-contact input,
+  .formulaire-contact textarea {
+    max-width: 450px;
+  }
+}
+.formTxtAreaMessage{
+    margin-bottom: 0.5rem;
+}

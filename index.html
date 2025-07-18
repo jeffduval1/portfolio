@@ -110,14 +110,14 @@
           <span aria-hidden="true">🔗</span>
           LinkedIn :
           <a href="https://www.linkedin.com/in/jean-francois-duval-web" target="_blank" rel="noopener noreferrer">
-            Mon profil sur LinkedIn
+            Voir le profil
           </a>
         </p>
         <p>
           <span aria-hidden="true">💻</span>
           GitHub :
           <a href="https://github.com/jeffduval1" target="_blank" rel="noopener noreferrer">
-            Mon profil sur Github
+            Voir le profil
           </a>
         </p>
         <p>
@@ -128,7 +128,8 @@
 
     <section id="contact" aria-labelledby="titre-contact" data-clair>
       <h2 id="titre-contact" class="section-titre">Me contacter</h2>
-      <form action="mailto:toncourriel@example.com" method="POST" enctype="text/plain">
+      <div class="ctnForm">
+      <form class="formulaire-contact" action="mailto:toncourriel@example.com" method="POST" enctype="text/plain">
         <label for="nom">Nom</label>
         <input type="text" id="nom" name="nom" required>
 
@@ -136,10 +137,11 @@
         <input type="email" id="courriel" name="courriel" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
+        <textarea id="message" name="message" class="formTxtAreaMessage" rows="5" required></textarea>
 
         <button type="submit">Envoyer</button>
       </form>
+    </div>
     </section>
   </main>
 
