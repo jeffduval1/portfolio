@@ -1,173 +1,259 @@
-/* =====================================
-   🎨 PALETTE DE COULEURS — Personnelle
-===================================== */
+    :root {
+        --couleur-principale: #3A86FF;
+        --couleur-secondaire: #8338EC;
+        --couleur-fond: #F9FAFC;
+        --couleur-texte: #1F1F1F;
+        --couleur-accent: #FFBE0B;
+        --police-titres: 'Space Grotesk', sans-serif;
+        --police-texte: 'Inter', sans-serif;
+    }
 
-:root {
-    --color-primary: #1C2D49;       /* Space Cadet : titres, texte principal */
-    --color-background: #ECECEC;   /* Anti-Flash White : fond principal */
-    --color-accent: #FFC300;       /* Mikado Yellow : boutons, accents visuels */
-    --color-alert: #E05E42;        /* Cinnabar : hover, erreurs, interactions */
-    --color-light-grey: #DCDCDC;   /* Variante de fond pour cartes ou hover */
-    --color-white: #FFFFFF;
-  }
-  
-  /* =====================================
-     🅰️ POLICES — Google Fonts intégrées
-     (à insérer dans <head>)
-  ===================================== */
-  
-  /* À placer dans ton HTML :
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
-  */
-  body {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    background-color: var(--color-background);
-    color: var(--color-primary);
-    line-height: 1.6;
-  }
-  
-  /* =====================================
-     🧱 STRUCTURE TYPOGRAPHIQUE
-  ===================================== */
-  
-  /* Titres principaux */
-  h1, h2, h3 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 700;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-    color: var(--color-primary);
-    margin-top: 1.5em;
-  }
-  
-  /* Sous-titres */
-  h4, h5, h6 {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    color: var(--color-primary);
-    margin-top: 1em;
-  }
-  
-  /* Paragraphes */
-  p {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 1rem;
-    color: var(--color-primary);
-  }
-  
-  /* Navigation */
-  nav {
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.03em;
-  }
-  
-  /* Boutons primaires */
-  .btn-primary {
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-size: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    padding: 0.5em 1em;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .btn-primary:hover {
-    background-color: var(--color-alert);
-    color: var(--color-white);
-  }
-  
-  /* Boutons secondaires */
-  .btn-secondary {
-    background-color: var(--color-alert);
-    color: var(--color-white);
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-    font-size: 0.875rem;
-    padding: 0.4em 0.8em;
-    border-radius: 20px;
-  }
-  
-  /* Légendes et info discrète */
-  .caption {
-    font-family: 'Inter', sans-serif;
-    font-weight: 400;
-    font-size: 0.75rem;
-    opacity: 0.7;
-    font-style: italic;
-  }
-  
-  /* Citations ou mise en avant */
-  blockquote {
-    font-family: 'Space Grotesk', sans-serif;
-    font-weight: 500;
-    font-style: italic;
-    font-size: 1.25rem;
-    margin: 1em 0;
-    padding-left: 1.5em;
-    border-left: 3px solid var(--color-accent);
-    color: var(--color-primary);
-  }
-  
-  /* Badges */
-  .badge {
-    display: inline-block;
-    background-color: var(--color-accent);
-    color: var(--color-primary);
-    font-family: 'Inter', sans-serif;
-    font-weight: 500;
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    border-radius: 999px;
-    padding: 0.25em 0.75em;
-  }
-  
-  /* Données / nombres */
-  .data-number {
-    font-family: 'Inter', sans-serif;
-    font-weight: 600;
-    font-variant-numeric: tabular-nums;
-    font-size: 1.125rem;
-    color: var(--color-alert);
-  }
-  
-  /* Formulaires */
-  input, textarea, select {
-    font-family: 'Inter', sans-serif;
-    font-size: 1rem;
-    padding: 0.5em;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  input::placeholder {
-    font-style: italic;
-    color: #aaa;
-  }
-  
-  label {
-    font-weight: 500;
-    display: block;
-    margin-bottom: 0.25em;
-  }
-  
-  /* Modales */
-  .modal {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--color-white);
-    color: var(--color-primary);
-    padding: 2em;
-    border-radius: 8px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-  }
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        margin: 0;
+        font-family: var(--police-texte);
+        background-color: var(--couleur-fond);
+        color: var(--couleur-texte);
+        line-height: 1.6;
+    }
+
+    header {
+        padding: 2rem;
+        background: linear-gradient(90deg, var(--couleur-principale), var(--couleur-secondaire));
+        color: white;
+        text-align: center;
+    }
+
+    header h1 {
+        font-family: var(--police-titres);
+        font-size: 32 px;
+        margin: 0;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+        background-color: white;
+        padding: 1rem;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    }
+
+    nav a {
+        text-decoration: none;
+        color: var(--couleur-principale);
+        font-weight: bold;
+    }
+
+    section {
+        padding: 4rem 2rem;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    .section-titre {
+        font-family: var(--police-titres);
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .profil-photo {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 50%;
+        border: 4px solid var(--couleur-accent);
+        margin-bottom: 1rem;
+    }
+
+    .carte-projet {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+        margin-bottom: 2rem;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    .carte-projet.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    footer {
+        background-color: #1F1F1F;
+        color: white;
+        text-align: center;
+        padding: 2rem 1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @media screen and (min-width: 601px) {
+        #menuToggle {
+            display: none;
+        }
+    }
+
+    #menuToggle:focus-visible,
+    #closeMenu:focus-visible {
+        outline: 2px dashed var(--couleur-accent);
+        outline-offset: 4px;
+    }
+
+    section[data-clair] {
+        background-color: #ffffff;
+        color: var(--couleur-texte);
+    }
+
+    /* Bouton hamburger */
+    #menuToggle {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 1001;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: #ffffff;
+        cursor: pointer;
+        transition: color 0.3s ease;
+    }
+
+    #menuToggle.clair {
+        color: #1f1f1f;
+        /* ou var(--couleur-principale) */
+    }
+
+    /* Overlay */
+    #overlay {
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        pointer-events: none;
+        z-index: 1000;
+        transition: opacity 0.3s ease;
+    }
+
+    /* Menu latéral */
+    #menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 80%;
+        height: 100%;
+        z-index: 1002;
+        padding: 2rem 1.5rem;
+        transform: translateX(100%);
+        transition: transform 0.4s ease, box-shadow 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        backdrop-filter: blur(8px);
+        background-color: rgba(255, 255, 255, 0.85);
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #menu ul li {
+        opacity: 0;
+        transform: translateY(10px);
+        animation: fadeInUp 0.6s ease forwards;
+    }
+    #menu.active {
+        transform: translateX(0);
+      }
+    #menu.active ul li:nth-child(1) {
+        animation-delay: 0.1s;
+    }
+
+    #menu.active ul li:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    #menu.active ul li:nth-child(3) {
+        animation-delay: 0.3s;
+    }
+
+    #menu.active ul li:nth-child(4) {
+        animation-delay: 0.4s;
+    }
+
+    #menu.active ul li:nth-child(5) {
+        animation-delay: 0.5s;
+    }
+
+    @keyframes fadeInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Fermeture */
+    #closeMenu {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 2rem;
+        color: var(--couleur-principale);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+
+    #closeMenu:hover {
+        transform: rotate(90deg);
+    }
+
+    /* Liens */
+    #menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 2rem 0 0;
+    }
+
+    #menu a {
+        text-decoration: none;
+        color: var(--couleur-principale);
+        font-family: var(--police-titres);
+        font-size: 1.4rem;
+        /* augmenté */
+        line-height: 1.8;
+        /* plus d’air */
+        font-weight: 600;
+        transition: color 0.3s ease;
+    }
+
+    #menu a:hover,
+    #menu a:focus-visible {
+        color: var(--couleur-secondaire);
+        text-decoration: underline;
+    }
+
+    
+
+    #overlay.active {
+        opacity: 1;
+        pointer-events: auto;
+    }

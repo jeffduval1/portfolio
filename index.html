@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jean-François Duval | Intégrateur Web</title>
+  <meta name="description" content="Portfolio de Jean-François Duval, intégrateur web spécialisé en accessibilité, responsive design et développement moderne.">
+
+  <!-- Polices -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  
+</head>
+
+<body>
+  <header id="accueil">
+    <img src="/images/profil2025.jpg" alt="Photo de Jean-François Duval" class="profil-photo" />
+    <h1>
+        <span class="prenom">Jean-François</span><br>
+        <span class="nom">Duval</span>
+      </h1>
+    <p>Intégrateur Web | Accessibilité, Responsive, Performance</p>
+  </header>
+
+  <!-- Bouton hamburger (mobile uniquement) -->
+<button id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+
+<!-- Overlay (fond semi-transparent quand le menu est ouvert) -->
+<div id="overlay" tabindex="-1"></div>
+
+<!-- Menu latéral -->
+<nav id="menu" role="navigation" aria-label="Menu principal">
+  <button id="closeMenu" aria-label="Fermer le menu">✕</button>
+  <ul>
+    <li><a href="#projets">Projets</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#a-propos">À propos</a></li>
+    <li><a href="#cv">CV</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+  <main>
+    <section id="projets" aria-labelledby="titre-projets" data-clair>
+      <h2 id="titre-projets" class="section-titre">Mes projets</h2>
+      <div class="carte-projet">[Projet 1 – Titre, techno, description, lien]</div>
+      <div class="carte-projet">[Projet 2 – Titre, techno, description, lien]</div>
+      <div class="carte-projet">[Projet 3 – Titre, techno, description, lien]</div>
+    </section>
+
+    <section id="competences" aria-labelledby="titre-competences" data-clair>
+      <h2 id="titre-competences" class="section-titre">Compétences</h2>
+      <ul>
+        <li>HTML5 / CSS3 (SASS, BEM)</li>
+        <li>JavaScript Vanilla</li>
+        <li>Accessibilité (WCAG, ARIA)</li>
+        <li>Responsive Design / Mobile-first</li>
+        <li>CMS : WordPress, TYPO3</li>
+        <li>Figma, Chrome DevTools</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
+
+    <section id="a-propos" aria-labelledby="titre-apropos" data-clair>
+      <h2 id="titre-apropos" class="section-titre">À propos</h2>
+      <p>[Texte de présentation à venir – parcours, style de travail, valeurs, etc.]</p>
+    </section>
+
+    <section id="cv" aria-labelledby="titre-cv" data-clair>
+      <h2 id="titre-cv" class="section-titre">CV et profils</h2>
+      <ul>
+        <li><a href="LIEN_VERS_GITHUB_CV.pdf" target="_blank" rel="noopener">Télécharger mon CV</a></li>
+        <li><a href="https://github.com/tonprofil" target="_blank" rel="noopener">Mon GitHub</a></li>
+        <li><a href="https://linkedin.com/in/tonprofil" target="_blank" rel="noopener">Mon LinkedIn</a></li>
+      </ul>
+    </section>
+
+    <section id="contact" aria-labelledby="titre-contact" data-clair>
+      <h2 id="titre-contact" class="section-titre">Me contacter</h2>
+      <form action="mailto:toncourriel@example.com" method="POST" enctype="text/plain">
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required>
+
+        <label for="courriel">Courriel</label>
+        <input type="email" id="courriel" name="courriel" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Jean-François Duval – Intégrateur Web</p>
+  </footer>
+  <script src="main.js" defer></script>
+</body>
+
+</html>
