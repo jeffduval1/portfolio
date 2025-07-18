@@ -1,63 +1,73 @@
+document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menuToggle');
     const menu = document.getElementById('menu');
     const overlay = document.getElementById('overlay');
     const closeMenu = document.getElementById('closeMenu');
     const links = menu.querySelectorAll('a');
-    
+
     function openMenu() {
-      menu.classList.add('active');
-      overlay.classList.add('active');
-      menuToggle.setAttribute('aria-expanded', 'true');
+        menu.classList.add('active');
+        overlay.classList.add('active');
+        menuToggle.setAttribute('aria-expanded', 'true');
     }
-    
+
     function closeMenuFn() {
-      menu.classList.remove('active');
-      overlay.classList.remove('active');
-      menuToggle.setAttribute('aria-expanded', 'false');
+        menu.classList.remove('active');
+        overlay.classList.remove('active');
+        menuToggle.setAttribute('aria-expanded', 'false');
     }
-    
+
     menuToggle.addEventListener('click', () => {
-      const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
-      expanded ? closeMenuFn() : openMenu();
+        const expanded = menuToggle.getAttribute('aria-expanded') === 'true';
+        expanded ? closeMenuFn() : openMenu();
     });
-    
+
     closeMenu.addEventListener('click', closeMenuFn);
     overlay.addEventListener('click', closeMenuFn);
     document.addEventListener('keydown', e => {
-      if (e.key === 'Escape') closeMenuFn();
+        if (e.key === 'Escape') closeMenuFn();
     });
 
-    const toggle = document.getElementById('menuToggle');
-const sectionsClaires = document.querySelectorAll('[data-clair]');
+    const sectionsClaires = document.querySelectorAll('[data-clair]');
 
-const observerClair = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      toggle.classList.add('clair');
-    } else {
-      toggle.classList.remove('clair');
-    }
-  });
-}, { threshold: 0.5 });
+    const observerClair = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                toggle.classList.add('clair');
+            } else {
+                toggle.classList.remove('clair');
+            }
+        });
+    }, { threshold: 0.5 });
 
-sectionsClaires.forEach(section => observerClair.observe(section));
-    
+    sectionsClaires.forEach(section => observerClair.observe(section));
+    sectionsClaires.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (
+            rect.top < window.innerHeight * 0.5 &&
+            rect.bottom > window.innerHeight * 0.5
+        ) {
+            toggle.classList.add('clair');
+        }
+    });
+
     // Fermer le menu au clic sur une ancre
     links.forEach(link => {
-      link.addEventListener('click', closeMenuFn);
+        link.addEventListener('click', closeMenuFn);
     });
 
     // Animation d’apparition simple
 
-      const observer = new IntersectionObserver(entries => {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
         });
-      });
-  
-      document.querySelectorAll('.carte-projet').forEach(carte => {
+    });
+
+    document.querySelectorAll('.carte-projet').forEach(carte => {
         observer.observe(carte);
-      });
+    });
+});
