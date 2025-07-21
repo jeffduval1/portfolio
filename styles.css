@@ -1,13 +1,15 @@
     :root {
-        --couleur-principale: #3A86FF;
-        --couleur-secondaire: #8338EC;
-        --couleur-fond: #F9FAFC;
+        --couleur-principale: #1C2D49;    /* Space Cadet : titres, texte principal */
+        --couleur-secondaire: #5D3FD3
+        --couleur-fond: #ECECEC;            /* Anti-Flash White : fond principal */
         --couleur-texte: #1F1F1F;
-        --couleur-accent: #FFBE0B;
+        --couleur-accent: #FFC300;        /* Mikado Yellow : boutons, accents visuels */
+        --couleur-alerte: #E05E42;        /* Cinnabar : hover, erreurs, interactions */
+        --color-light-grey: #DCDCDC;      /* Variante de fond pour cartes ou hover */
+        --color-white: #FFFFFF;
         --police-titres: 'Space Grotesk', sans-serif;
         --police-texte: 'Inter', sans-serif;
     }
-
     *,
     *::before,
     *::after {
