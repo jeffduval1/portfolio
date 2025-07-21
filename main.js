@@ -71,3 +71,22 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(carte);
     });
 });
+document.querySelectorAll('.accordion-header').forEach(header => {
+    header.addEventListener('click', () => {
+      const content = header.nextElementSibling;
+      const isOpen = content.classList.contains('open');
+  
+      // Fermer tous les autres accordéons
+      document.querySelectorAll('.accordion-content.open').forEach(openContent => {
+        openContent.classList.remove('open');
+        openContent.previousElementSibling.querySelector('.chevron').classList.remove('rotated');
+      });
+  
+      // Ouvrir ou refermer l'accordéon actuel
+      if (!isOpen) {
+        content.classList.add('open');
+        header.querySelector('.chevron').classList.add('rotated');
+      }
+    });
+  });
+  
