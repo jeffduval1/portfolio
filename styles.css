@@ -733,3 +733,16 @@ section[data-clair] {
         padding-left: 1.5rem;
     }
 }
+.formulaire-contact p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+  }
+  
+  .formulaire-contact label {
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    font-size: 1rem;
+    color: var(--couleur-principale);
+  }
+  
