@@ -39,7 +39,7 @@ html {
 body {
     margin: 0;
     font-family: var(--police-texte);
-    background-color: var(--couleur-fond);
+    background: radial-gradient(circle at top, rgba(237, 212, 178, 0.1) 0%, rgba(255, 208, 123, 0.1) 100%);
     color: var(--couleur-texte);
     line-height: 1.6;
 }
@@ -446,23 +446,12 @@ section[data-clair] {
     text-align: left;
 }
 
-.images-projet {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1rem;
-    margin-bottom: 1rem;
-}
 
 .images-projet figure {
     margin: 0;
 }
 
-.images-projet img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    display: block;
-}
+
 
 .images-projet figcaption {
     font-size: 0.9rem;
@@ -501,11 +490,6 @@ section[data-clair] {
     text-decoration: underline;
 }
 
-@media (min-width: 768px) {
-    .images-projet {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
 
 #apropos {
     background: linear-gradient(135deg, #fdfbff 0%, #f0f4ff 100%);
@@ -666,7 +650,7 @@ section[data-clair] {
 .accordion-header {
     width: 100%;
     padding: 1rem;
-    background: var(--color-background, #f5f5f5);
+    background: rgba(255, 243, 212, 0.3); /* version douce */
     border: none;
     display: flex;
     justify-content: space-between;
@@ -700,4 +684,52 @@ section[data-clair] {
 
 .chevron.rotated {
     transform: rotate(180deg);
+}
+.carte-projet {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+  
+    .images-projet {
+      flex: 1;
+      max-width: 45%;
+    }
+  
+    .infos-projet {
+      flex: 2;
+      padding-left: 1.5rem;
+    }
+  }
+  .image-projet-pleine {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    display: block;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    max-height: 320px;
+    object-fit: contain;
+  }
+
+@media (min-width: 768px) {
+    .carte-projet {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .image-projet-pleine {
+        max-width: 100%;
+        max-height: 240px;
+    }
+
+    .images-projet {
+        max-width: 40%;
+        flex-shrink: 0;
+    }
+
+    .infos-projet {
+        flex: 1;
+        padding-left: 1.5rem;
+    }
 }
