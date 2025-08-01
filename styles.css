@@ -12,6 +12,9 @@
     --couleur-alerte: #B3380F;
     /* Variante plus foncée de l’orange – erreurs, suppressions */
     --color-white: #FFFFFF;
+    --couleur-accordeon-douce: #FDF6F1;
+    --couleur-accordeon-hover: #F6ECE4;
+    --couleur-accordeon-panel: #FFFDFB;
     --police-titres: 'Space Grotesk', sans-serif;
     --police-texte: 'Inter', sans-serif;
 }
@@ -707,7 +710,7 @@ section[data-clair] {
 .accordion-header {
     width: 100%;
     padding: 1rem;
-    background: rgba(255, 243, 212, 0.3);
+    background: --couleur-accordeon-douce;
     /* version douce */
     border: none;
     display: flex;
@@ -720,7 +723,7 @@ section[data-clair] {
 }
 
 .accordion-header:hover {
-    background: var(--color-light-grey, #eaeaea);
+    background: var(--couleur-accordeon-hover);
 }
 
 .accordion-content {
@@ -734,6 +737,7 @@ section[data-clair] {
     max-height: 500px;
     /* ajustable */
     padding: 1rem;
+    background: var(--couleur-accordeon-panel);
 }
 
 .chevron {
@@ -755,6 +759,7 @@ section[data-clair] {
     .images-projet {
         flex: 1;
         max-width: 45%;
+        margin-top: 24px;
     }
 
     .infos-projet {
@@ -762,7 +767,9 @@ section[data-clair] {
         padding-left: 1.5rem;
     }
 }
-
+.caption-img{
+    margin-top: 1rem;
+}
 .image-projet-pleine {
     width: 100%;
     height: auto;
