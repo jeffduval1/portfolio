@@ -89,4 +89,19 @@ document.querySelectorAll('.accordion-header').forEach(header => {
       }
     });
   });
+  document.querySelectorAll('.image-projet-pleine').forEach(img => {
+    img.addEventListener('click', () => {
+      const modal = document.getElementById('modal-image');
+      const imgFull = document.getElementById('image-grand-format');
+      imgFull.src = img.src;
+      imgFull.alt = img.alt;
+      modal.classList.remove('hidden');
+    });
+  });
+  
+  document.getElementById('modal-image').addEventListener('click', (e) => {
+    if (e.target.id === 'modal-image' || e.target.classList.contains('close-modal')) {
+      e.currentTarget.classList.add('hidden');
+    }
+  });
   

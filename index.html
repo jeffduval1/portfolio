@@ -63,7 +63,7 @@
         <article class="carte-projet">
 
           <div class="images-projet">
-            <img src="images/projets/eventually/eventually.png" alt="Aperçu de l’interface Eventually"
+            <img src="images/projets/eventually/vue-categories.png" alt="Aperçu de l’interface Eventually"
               class="image-projet-pleine">
           </div>
 
@@ -107,35 +107,11 @@
           </div>
         </article>
       </div>
+
       <div class="conteneur-projet">
         <article class="carte-projet">
 
           <div class="images-projet">
-            <img src="images/projets/tim/tim_accueil.png" alt="Aperçu de l’interface TIM" class="image-projet-pleine">
-          </div>
-          <div class="infos-projet">
-            <h3 class="titre-projet">Site du programme TIM</h3>
-            <p class="description-projet"><strong>Description du projet :</strong> Le projet final du programme
-              consistait à
-              refaire
-              le site de la technique en utilisant les apprentissages accumulés en design, intégration et programmation.
-            </p>
-            <p class="techno-projet"><strong>Technologies&nbsp;:</strong> HTML, CSS, JavaScript, PHP, MVC, Blade, Sass,
-              Figma, bases de données</p>
-
-          </div>
-        </article>
-      </div>
-      <div class="conteneur-projet">
-        <article class="carte-projet">
-
-          <div class="images-projet">
-           <!--  <svg class="image-projet-pleine logo-angular" role="img" viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg">
-              <title>Angular</title>
-              <path
-                d="M16.712 17.711H7.288l-1.204 2.916L12 24l5.916-3.373-1.204-2.916ZM14.692 0l7.832 16.855.814-12.856L14.692 0ZM9.308 0 .662 3.999l.814 12.856L9.308 0Zm-.405 13.93h6.198L12 6.396 8.903 13.93Z" />
-            </svg> -->
             <img class="image-projet-pleine logo-angular" src="/images/logos/angular-express.png" alt="">
             <p class="caption-img"><em>Le projet en est à ses premières étapes, avec une attention particulière portée à la solidité
                 de l’architecture</em></caption>
@@ -144,6 +120,7 @@
 
           <div class="infos-projet">
             <h3 class="titre-projet">Gestionnaire de cartes de révision <br>Memo-Connect</h3>
+            <p><a href="https://trello.com/b/E0HVTX14/m%C3%A9mo-connect#">Lien vers le Kanban du projet</a></p>
             <p class="description-projet"><strong>Description du projet :</strong> Memo-Connect est une application web
               de gestion de cartes de révision pensée pour l’apprentissage actif, en solo ou en collaboration. Elle
               permet de créer, organiser, filtrer et étudier des cartes mémoire de manière structurée, avec une
@@ -192,6 +169,25 @@
 
               </div>
             </div>
+          </div>
+        </article>
+      </div>
+      <div class="conteneur-projet">
+        <article class="carte-projet">
+
+          <div class="images-projet">
+            <img src="images/projets/tim/tim_accueil.png" alt="Aperçu de l’interface TIM" class="image-projet-pleine">
+          </div>
+          <div class="infos-projet">
+            <h3 class="titre-projet">Site du programme TIM</h3>
+            <p class="description-projet"><strong>Description du projet :</strong> Le projet final du programme
+              consistait à
+              refaire
+              le site de la technique en utilisant les apprentissages accumulés en design, intégration et programmation.
+            </p>
+            <p class="techno-projet"><strong>Technologies&nbsp;:</strong> HTML, CSS, JavaScript, PHP, MVC, Blade, Sass,
+              Figma, bases de données</p>
+
           </div>
         </article>
       </div>
@@ -295,6 +291,10 @@
     <p>&copy; Jean-François Duval – Intégrateur Web</p>
   </footer>
   <script src="main.js" defer></script>
+  <div id="modal-image" class="modal-image hidden">
+    <span class="close-modal">×</span>
+    <img id="image-grand-format" alt="Image agrandie">
+  </div>
 </body>
 
 </html>
