@@ -32,7 +32,7 @@
         </p>
         <div class="hero-actions">
           <a href="#projets" class="btn-primaire">Découvrir mes produits en ligne</a>
-          <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="btn-secondaire">🎬 Voir mes montages vidéo (16:9 et 9:16)</a>
+          <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="btn-secondaire">🎬 Tous mes montages sur OneDrive (16:9 et 9:16)</a>
         </div>
       </div>
     </div>
@@ -82,7 +82,7 @@
             <h3 class="titre-projet">01 · DonkeyNote : SaaS de gestion de missions (matrice Eisenhower)</h3>
             <p class="liens-projet">
               <a href="https://donkeynote.app" target="_blank" rel="noopener noreferrer" class="lien-action">🌐 https://donkeynote.app</a>
-              <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="lien-action lien-video">🎬 Voir la capsule « La cote qui range »</a>
+              <a href="?video=cote-qui-range" data-video="cote-qui-range" class="lien-action lien-video">🎬 Capsule vidéo : « La cote qui range »</a>
             </p>
             <p class="description-projet"><strong>Description du produit :</strong> SaaS complet de gestion de missions et de prise de notes conçu, développé et exploité de bout en bout. L'utilisateur attribue une cote de 1 à 10 à chaque mission, et la matrice Eisenhower la classe automatiquement dans le bon cadran, avec ajustement selon l'échéance.</p>
             <p class="techno-projet"><strong>Stack utilisé :</strong> React 18, TypeScript, Vite, TanStack Router et Query, CSS Modules, dnd-kit, Quill, PWA et service worker · Node.js, Fastify 5, Zod 4, Drizzle ORM, PostgreSQL sur Supabase (Montréal) · SDK Anthropic (Claude), SDK OpenAI (Whisper) · Clerk, Stripe, Microsoft Graph, AWS SES v2 et S3, Resend, Twilio, Web Push · Fly.io, Cloudflare Pages, Vitest, Playwright, Sentry</p>
@@ -96,13 +96,17 @@
               </button>
               <div class="accordion-content">
                 <ul class="liste-fonctionnalites">
-                  <li><span class="emoji">🤖</span><span><strong>Classificateur IA :</strong> chaque note est classée dans la bonne catégorie par l'IA, avec file de revue et acceptation automatique au-delà de 0,92 de confiance.</span></li>
-                  <li><span class="emoji">🎙️</span><span><strong>Dictée Whisper :</strong> transcription vocale dans les notes et les missions, vendue par forfait de 60 minutes à l'unité par Stripe.</span></li>
-                  <li><span class="emoji">📅</span><span><strong>Synchronisation Outlook :</strong> OAuth Microsoft Graph, rendez-vous et séries sur le même jour civil des deux côtés, détection des doublons.</span></li>
-                  <li><span class="emoji">🔔</span><span><strong>Rappels sans doublons :</strong> courriel (AWS SES), notification push et SMS avec réservation en base avant le départ entre deux serveurs.</span></li>
-                  <li><span class="emoji">💳</span><span><strong>Abonnements et droits :</strong> Stripe à 5 paliers d'accès, webhooks signés et droits vérifiés côté serveur.</span></li>
-                  <li><span class="emoji">📴</span><span><strong>PWA hors ligne et bilingue FR/EN :</strong> quatre filets contre l'écran blanc après mise à jour, corbeille et import/export en 3 stratégies avec copie de sécurité.</span></li>
-                  <li><span class="emoji">🧪</span><span><strong>Tests et résilience :</strong> près de 2 000 tests unitaires et serveur (Vitest) et environ 300 tests E2E Playwright (iPhone SE 320 px, iPhone SE, iPhone 14) sur base Postgres jetable ; sauvegardes en 3 couches testées sur 93 tables.</span></li>
+                  <li><span class="emoji">🤖</span><span><strong>1. Classificateur IA :</strong> chaque note est classée dans la bonne catégorie par l'IA, avec file de revue et acceptation automatique au-delà de 0,92 de confiance et journaux d'observabilité en production.</span></li>
+                  <li><span class="emoji">🎙️</span><span><strong>2. Dictée Whisper :</strong> transcription vocale dans les notes et les missions, vendue par forfait de 60 minutes à l'unité par Stripe.</span></li>
+                  <li><span class="emoji">📅</span><span><strong>3. Synchronisation Outlook :</strong> OAuth Microsoft Graph, rendez-vous et séries sur le même jour civil des deux côtés, détection des doublons entre les deux agendas.</span></li>
+                  <li><span class="emoji">🔔</span><span><strong>4. Rappels :</strong> courriel (AWS SES), notification push et SMS avec envoi réservé en base avant le départ (aucun doublon entre deux serveurs).</span></li>
+                  <li><span class="emoji">🗂️</span><span><strong>5. Corbeille, export et import :</strong> corbeille des missions, des notes et des flows ; export complet et import en trois stratégies (recréer, fusionner, remplacer) avec copie de sécurité avant tout remplacement.</span></li>
+                  <li><span class="emoji">💳</span><span><strong>6. Abonnements et droits :</strong> abonnements Stripe à 5 paliers d'accès, webhooks signés et droits vérifiés côté serveur, pas seulement à l'écran.</span></li>
+                  <li><span class="emoji">📴</span><span><strong>7. Hors ligne :</strong> application installable (PWA) avec service worker, quatre filets contre l'écran blanc après une mise à jour et test hors ligne joué sur le build de production.</span></li>
+                  <li><span class="emoji">🌐</span><span><strong>8. Bilingue FR/EN :</strong> toute l'interface en deux langues, avec passe de contre-vérification par groupes de 20 clés.</span></li>
+                  <li><span class="emoji">🧪</span><span><strong>9. Tests :</strong> près de 2 000 tests unitaires et serveur (Vitest, Testing Library) et environ 300 tests E2E Playwright (iPhone SE 320 px, iPhone SE, iPhone 14) sur base Postgres jetable ; la CI bloque sur toute faille élevée et sur un test laissé en <code>.only</code>.</span></li>
+                  <li><span class="emoji">🛡️</span><span><strong>10. Résilience et surveillance :</strong> revue de novembre 2026 (13 réparations en ligne, garde sur la limite de débit Fastify), délais sur tous les appels externes, collecteur quotidien de 31 mesures et routine Claude quotidienne.</span></li>
+                  <li><span class="emoji">💾</span><span><strong>11. Protection des données :</strong> sauvegardes en trois couches (Supabase quotidienne, dump GitHub quotidien, dump local), test de restauration sur 93 tables et migrations additives rétrocompatibles.</span></li>
                 </ul>
               </div>
             </div>
@@ -130,6 +134,8 @@
             <p class="liens-projet">
               <a href="https://propulsion-numerique.ca" target="_blank" rel="noopener noreferrer" class="lien-action">🌐 https://propulsion-numerique.ca</a>
               <a href="https://propulsion-numerique.ca/bilan-web-gratuit/" target="_blank" rel="noopener noreferrer" class="lien-action">🧭 Boussole entrepreneuriale</a>
+              <a href="?video=test-de-la-vue" data-video="test-de-la-vue" class="lien-action lien-video">🎬 Capsule : « Le test de la vue »</a>
+              <a href="?video=des-formulaires" data-video="des-formulaires" class="lien-action lien-video">🎬 Capsule : « Des formulaires pour tout »</a>
             </p>
             <p class="description-projet"><strong>Description du projet :</strong> Mon agence web québécoise. Au-delà d'un thème WordPress sur mesure, j'y ai bâti un écosystème de moteurs logiciels autonomes conçus dès le départ pour être installés et vendus séparément chez des clients tiers.</p>
             <p class="techno-projet"><strong>Stack utilisé :</strong> WordPress sur mesure, ACF Pro, PHP, SCSS, JavaScript modulaire · Moteur social : React 18, TypeScript, Vite · Modèles et API d'IA : Anthropic Claude (Sonnet 4.6, Haiku 4.5), OpenAI · WP Engine (prod et staging), GitHub Actions, Postmark (webhooks), GA4, Meta Pixel, Consent Mode v2</p>
@@ -143,11 +149,13 @@
               </button>
               <div class="accordion-content">
                 <ul class="liste-fonctionnalites">
-                  <li><span class="emoji">🧭</span><span><strong>Boussole entrepreneuriale (<a href="https://propulsion-numerique.ca/bilan-web-gratuit/" target="_blank" rel="noopener noreferrer">en ligne</a>) :</strong> questionnaire de qualification de 33 questions qui bifurque selon qu'on a un site ou non, lecture personnalisée générée par l'IA (prompt v1.41 versionné et gelé) et suivi d'abandon question par question dans GA4.</span></li>
-                  <li><span class="emoji">✍️</span><span><strong>Moteur éditorial 2.0 (en préparation · sortie prochaine) :</strong> l'outil qui écrit les articles d'une entreprise dans sa propre voix ; plus de 200 décisions de conception consignées avant d'écrire le code et voix décortiquée sur bancs d'essai.</span></li>
-                  <li><span class="emoji">📲</span><span><strong>Moteur social :</strong> extension WordPress avec façade en React 18, TypeScript et Vite (calendrier de publications, récurrences à paliers progressifs, suivi des publicités, multi-entreprises, installation par simple .zip).</span></li>
-                  <li><span class="emoji">🛡️</span><span><strong>Moteur de soumissions et surcouche courriel :</strong> pipeline de 9 étapes (normalisation, assainissement, validation, jeton JS, piège à robots, limite de débit, idempotence, enregistrement, envoi Postmark avec journal et webhooks).</span></li>
-                  <li><span class="emoji">📊</span><span><strong>Portail statistiques :</strong> 7 sources interrogées par API (base de données du site, Postmark, GA4, Search Console, Meta, Google Business Profile, WP Engine), historique CSV cumulatif avec rattrapage de 30 jours et bilan écrit envoyé par courriel tous les 3 jours.</span></li>
+                  <li><span class="emoji">🧭</span><span><strong>1. Boussole entrepreneuriale (<a href="https://propulsion-numerique.ca/bilan-web-gratuit/" target="_blank" rel="noopener noreferrer">en ligne</a>) :</strong> questionnaire de qualification de 33 questions qui bifurque selon qu'on a un site ou non, lecture personnalisée générée par l'IA (prompt v1.41 versionné et gelé) et suivi d'abandon question par question dans GA4.</span></li>
+                  <li><span class="emoji">✍️</span><span><strong>2. Moteur éditorial 2.0 (en préparation · sortie prochaine) :</strong> l'outil qui écrit les articles d'une entreprise dans sa propre voix ; plus de 200 décisions de conception consignées avant d'écrire le code et voix décortiquée sur bancs d'essai.</span></li>
+                  <li><span class="emoji">📲</span><span><strong>3. Moteur social :</strong> extension WordPress avec façade en React 18, TypeScript et Vite (calendrier de publications, récurrences à paliers progressifs, suivi des publicités, multi-entreprises, installation par simple .zip).</span></li>
+                  <li><span class="emoji">🛡️</span><span><strong>4. Moteur de soumissions et surcouche courriel :</strong> pipeline de 9 étapes (normalisation, assainissement, validation, jeton JS, piège à robots, limite de débit, idempotence, enregistrement, envoi Postmark avec journal et webhooks).</span></li>
+                  <li><span class="emoji">📊</span><span><strong>5. Portail statistiques :</strong> 7 sources interrogées par API (base de données du site, Postmark, GA4, Search Console, Meta, Google Business Profile, WP Engine), historique CSV cumulatif avec rattrapage de 30 jours et bilan écrit envoyé par courriel tous les 3 jours.</span></li>
+                  <li><span class="emoji">📡</span><span><strong>6. Collecte Meta et GA4 par API :</strong> API Meta par jeton (campagnes, audiences, résultats) et API GA4 par compte de service sur deux sites.</span></li>
+                  <li><span class="emoji">🧩</span><span><strong>7. Catalogue de sections :</strong> page privée qui rassemble toutes les sections du site, prêtes à réutiliser pour un nouveau client.</span></li>
                 </ul>
               </div>
             </div>
@@ -174,24 +182,25 @@
             <h3 class="titre-projet">03 · Certi-Pro : site sur mesure et outils IA d'un garage automobile</h3>
             <p class="liens-projet">
               <a href="https://certi-pro.ca" target="_blank" rel="noopener noreferrer" class="lien-action">🌐 https://certi-pro.ca</a>
-              <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="lien-action lien-video">🎬 Voir les capsules RDV et Rappel d'entretien</a>
+              <a href="?video=rappel-entretien" data-video="rappel-entretien" class="lien-action lien-video">🎬 Capsule : « Rappel d'entretien »</a>
+              <a href="?video=formulaire-rdv" data-video="formulaire-rdv" class="lien-action lien-video">🎬 Capsule : « Formulaire de prise de RDV »</a>
             </p>
             <p class="description-projet"><strong>Description du projet :</strong> Site sur mesure d'un garage automobile de Charlesbourg (client réel), en production depuis août 2026 et sous contrat d'entretien mensuel.</p>
             <p class="techno-projet"><strong>Stack utilisé :</strong> WordPress sur mesure, ACF Pro, PHP, SCSS, JavaScript modulaire · Fichiers JSON à écriture atomique · Modèles et API d'IA : Anthropic Claude (Sonnet 4.6, Haiku 4.5), OpenAI GPT-4o-mini · WP Engine, Cloudflare, GitHub Actions, Postmark, API Pexels, GA4, Consent Mode v2</p>
 
             <div class="accordion">
               <button class="accordion-header" type="button">
-                <span>⚙️ Outils IA et systèmes livrés pour Certi-Pro</span>
+                <span>⚙️ Les 4 outils IA et systèmes livrés pour Certi-Pro</span>
                 <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M6 9l6 6 6-6" />
                 </svg>
               </button>
               <div class="accordion-content">
                 <ul class="liste-fonctionnalites">
-                  <li><span class="emoji">🔧</span><span><strong>Moteur de calendrier d'entretien par IA (actif) :</strong> le client entre son véhicule ; Claude Sonnet cherche en ligne le calendrier réel du constructeur, le code calcule la priorité (jamais l'IA), et Claude Haiku rédige avec sources et niveau de confiance obligatoires. Coût d'usage suivi en dollars.</span></li>
-                  <li><span class="emoji">📋</span><span><strong>7 formulaires métier :</strong> rendez-vous, forfaits, compagnie, policiers et militaires, PromoLoco, carrière (envoi de CV), plainte. Étapes multiples, validation conditionnelle (NIV obligatoire selon le service) et liens profonds préremplis.</span></li>
-                  <li><span class="emoji">🔍</span><span><strong>Protocole d'entretien par IA :</strong> entretien mensuel en 6 phases et 52 points de contrôle avec collecte automatique, preuves obligatoires et contre-vérification par un second agent.</span></li>
-                  <li><span class="emoji">📰</span><span><strong>Moteur de blog assisté par IA :</strong> 6 patrons de contenu, accroches générées par l'IA, suggestions de maillage interne, 3 mises en page et 8 commandes en ligne de commande pour le traitement par lots.</span></li>
+                  <li><span class="emoji">🔧</span><span><strong>1. Moteur de calendrier d'entretien par IA (actif · intégré à l'étape 2 du formulaire de prise de rendez-vous) :</strong> à l'étape 2 du formulaire de prise de rendez-vous, le client entre son véhicule ; Claude Sonnet cherche en ligne le calendrier réel du constructeur, le code calcule la priorité (jamais l'IA), et Claude Haiku rédige avec sources et niveau de confiance obligatoires. Coût d'usage suivi en dollars.</span></li>
+                  <li><span class="emoji">📋</span><span><strong>2. 7 formulaires métier :</strong> rendez-vous, forfaits, compagnie, policiers et militaires, PromoLoco, carrière (envoi de CV), plainte. Étapes multiples, validation conditionnelle (NIV obligatoire selon le service) et liens profonds préremplis.</span></li>
+                  <li><span class="emoji">🔍</span><span><strong>3. Protocole d'entretien par IA :</strong> entretien mensuel en 6 phases et 52 points de contrôle avec collecte automatique, preuves obligatoires et contre-vérification par un second agent.</span></li>
+                  <li><span class="emoji">📰</span><span><strong>4. Moteur de blog assisté par IA :</strong> 6 patrons de contenu, accroches générées par l'IA, suggestions de maillage interne, 3 mises en page et 8 commandes en ligne de commande pour le traitement par lots.</span></li>
                 </ul>
               </div>
             </div>
@@ -199,7 +208,7 @@
         </article>
       </div>
 
-      <!-- 05. Autres projets de l'écosystème Donkey -->
+      <!-- 04. Autres projets de l'écosystème Donkey -->
       <div class="conteneur-projet">
         <article class="carte-projet">
           <div class="images-projet">
@@ -232,14 +241,18 @@
           <div class="images-projet">
             <img src="images/projets/2026/motion-design-3a.png" alt="Capsule en motion design Des formulaires pour tout"
               class="image-projet-pleine">
-            <img src="images/projets/2026/propulsion-formulaires.png" alt="Planche de repérage et captures pleine page pour le montage par code"
-              class="image-projet-pleine image-secondaire">
+            <p class="caption-img"><em>Chaque capsule ci-contre s'ouvre automatiquement en 16:9 sur ordinateur ou en 9:16 sur mobile</em></p>
           </div>
 
           <div class="infos-projet">
             <h3 class="titre-projet">Direction d'agents en parallèle et chaîne de montage vidéo maison</h3>
             <p class="liens-projet">
-              <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="lien-action lien-video">🎬 Dossier OneDrive : 10 montages récents (formats 16:9 et 9:16)</a>
+              <a href="?video=cote-qui-range" data-video="cote-qui-range" class="lien-action lien-video">🎬 DonkeyNote : « La cote qui range »</a>
+              <a href="?video=test-de-la-vue" data-video="test-de-la-vue" class="lien-action lien-video">🎬 Boussole : « Le test de la vue »</a>
+              <a href="?video=des-formulaires" data-video="des-formulaires" class="lien-action lien-video">🎬 Motion design : « Des formulaires pour tout »</a>
+              <a href="?video=formulaire-rdv" data-video="formulaire-rdv" class="lien-action lien-video">🎬 Certi-Pro : « Formulaire de prise de RDV »</a>
+              <a href="?video=rappel-entretien" data-video="rappel-entretien" class="lien-action lien-video">🎬 Certi-Pro : « Rappel d'entretien »</a>
+              <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="lien-action">📂 Dossier OneDrive complet (16:9 et 9:16)</a>
             </p>
             <p class="techno-projet"><strong>Outils :</strong> Claude Code (Anthropic), Cursor, OpenAI Codex, Google Gemini · Fichiers <code>CLAUDE.md</code>, hooks de pré-validation, 33 protocoles écrits · Playwright, SUNO</p>
             <ul class="liste-fonctionnalites liste-directe">
@@ -291,7 +304,7 @@
       <div class="bloc-apropos">
         <p><strong>Je suis Jean-François Duval</strong>, développeur full stack TypeScript et fondateur de <strong>Propulsion Numérique</strong> et de <strong>DonkeyNote</strong> à Québec.</p>
 
-        <p>En parallèle de mon poste au gouvernement du Québec (MELCCFP, après le MAMH), j'ai bâti et mis en production plusieurs produits complets : le SaaS <strong>DonkeyNote</strong> (<a href="https://donkeynote.app" target="_blank" rel="noopener noreferrer">https://donkeynote.app</a>), le site et les moteurs logiciels de mon agence <strong>Propulsion Numérique</strong> (<a href="https://propulsion-numerique.ca" target="_blank" rel="noopener noreferrer">https://propulsion-numerique.ca</a>) ainsi que la plateforme et le calendrier d'entretien par IA du garage <strong>Certi-Pro</strong> (<a href="https://certi-pro.ca" target="_blank" rel="noopener noreferrer">https://certi-pro.ca</a>).</p>
+        <p>En parallèle de mon poste au gouvernement du Québec (MELCCFP, après le MAMH), j'ai bâti et mis en production plusieurs produits complets : le SaaS <strong>DonkeyNote</strong> (<a href="https://donkeynote.app" target="_blank" rel="noopener noreferrer">https://donkeynote.app</a>), le site et les 7 moteurs et outils de mon agence <strong>Propulsion Numérique</strong> (<a href="https://propulsion-numerique.ca" target="_blank" rel="noopener noreferrer">https://propulsion-numerique.ca</a>) ainsi que la plateforme et le calendrier d'entretien par IA (étape 2 du formulaire de prise de rendez-vous) du garage <strong>Certi-Pro</strong> (<a href="https://certi-pro.ca" target="_blank" rel="noopener noreferrer">https://certi-pro.ca</a>).</p>
 
         <p>Je travaille quotidiennement avec plusieurs agents de programmation en parallèle (Claude Code, Cursor, Codex, Gemini), encadrés par 33 protocoles écrits, des revues croisées systématiques et des suites de tests automatisés rigoureuses. Pour moi, l'IA qualifie et rédige là où elle excelle, mais le code garde toujours le dernier mot sur la logique critique, la sécurité et les données.</p>
       </div>
@@ -302,7 +315,7 @@
       <div class="grille-liens-profil">
         <p>
           📄 <strong>CV :</strong>
-          <a href="https://jeffduval1.github.io/cv-jf-duval/" target="_blank" rel="noopener noreferrer">Consulter en ligne</a> |
+          <a href="cv.html" target="_blank" rel="noopener noreferrer">Consulter en ligne</a> |
           <a href="documents/cv-jfduval.pdf" download>Télécharger (PDF)</a>
         </p>
         <p>
@@ -365,6 +378,26 @@
   <div id="modal-image" class="modal-image hidden">
     <span class="close-modal">×</span>
     <img id="image-grand-format" alt="Image agrandie">
+  </div>
+
+  <!-- Lecteur vidéo intelligent (sélectionne automatiquement 16:9 ou 9:16 selon le format d'écran) -->
+  <div id="modal-video" class="modal-video hidden" role="dialog" aria-modal="true" aria-labelledby="modal-video-titre">
+    <div class="modal-video-boite">
+      <div class="modal-video-entete">
+        <div class="modal-video-infos">
+          <h3 id="modal-video-titre">Capsule vidéo</h3>
+          <span id="modal-video-badge" class="badge-format-video">Format sélectionné selon votre écran</span>
+        </div>
+        <div class="modal-video-controles">
+          <button type="button" id="btn-format-16x9" class="btn-format">16:9 Paysage</button>
+          <button type="button" id="btn-format-9x16" class="btn-format">9:16 Mobile</button>
+          <button type="button" id="close-modal-video" class="close-modal-video" aria-label="Fermer la vidéo">✕</button>
+        </div>
+      </div>
+      <div class="modal-video-cadre">
+        <video id="lecteur-video" controls playsinline preload="metadata"></video>
+      </div>
+    </div>
   </div>
 </body>
 

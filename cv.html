@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jean-François Duval - Développeur full stack TypeScript · IA et agents de programmation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        @page {
+            size: Letter portrait;
+            margin: 13.5mm 16mm;
+        }
+
+        * {
+            box-sizing: border-box;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        .liste-contact {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 40px auto;
+            max-width: 850px;
+            background: #f9f9f9;
+            color: #333;
+            padding: 30px;
+            line-height: 1.55;
+            font-size: 14.5px;
+        }
+
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                max-width: none;
+                background: #ffffff;
+                font-size: 10pt;
+                line-height: 1.48;
+            }
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            color: #2c3e50;
+            break-after: avoid;
+        }
+
+        h1 {
+            font-size: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 5px;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 19px;
+            margin-top: 6px;
+            margin-bottom: 10px;
+            font-weight: normal;
+            color: #555;
+        }
+
+        h3 {
+            font-size: 20px;
+            margin-top: 28px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+
+        h4 {
+            font-size: 16px;
+            color: #2980b9;
+            margin: 14px 0 6px;
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            gap: 12px;
+        }
+
+        a {
+            color: #2980b9;
+            text-decoration: none;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin-top: 4px;
+            margin-bottom: 8px;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        .date {
+            color: #777;
+            font-size: 13.5px;
+            font-weight: normal;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        section {
+            margin-bottom: 24px;
+        }
+
+        .highlight {
+            background: #eef4fa;
+            padding: 12px 16px;
+            border-left: 5px solid #3498db;
+            margin-bottom: 16px;
+            border-radius: 4px;
+            break-inside: avoid;
+        }
+
+        .highlight h4 {
+            margin-top: 0;
+        }
+
+        .highlight p {
+            margin: 6px 0 0;
+        }
+
+        .bloc-poste {
+            break-inside: avoid;
+            margin-bottom: 12px;
+        }
+
+        .contact,
+        .skills,
+        .experience,
+        .education,
+        .qualities,
+        .languages,
+        .interests,
+        .projects {
+            margin-top: 22px;
+        }
+
+        .clear {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Jean-François Duval</h1>
+    <h2>Développeur full stack TypeScript · IA et agents de programmation</h2>
+    <p style="white-space: nowrap;">
+        <span>
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/jeffduval1" target="_blank"><strong>GitHub</strong></a>
+        </span>
+        &nbsp;|&nbsp;
+        <span>
+            <i class="fa-solid fa-palette"></i>
+            <a href="https://jeffduval1.github.io/portfolio/" target="_blank"><strong>Portfolio</strong></a>
+        </span>
+        &nbsp;|&nbsp;
+        <span>
+            <i class="fa-solid fa-film"></i>
+            <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank"><strong>Montages vidéo récents</strong></a>
+        </span>
+        &nbsp;|&nbsp;
+        <span>
+            <i class="fa-brands fa-linkedin"></i>
+            <a href="https://www.linkedin.com/in/jean-francois-duval-web" target="_blank"><strong>LinkedIn</strong></a>
+        </span>
+    </p>
+
+    <section class="contact">
+        <h3>Contact</h3>
+        <ul class="liste-contact">
+            <li><i class="fa-solid fa-envelope"></i> <strong>Courriel :</strong> <a href="mailto:jfduval.web@outlook.com">jfduval.web@outlook.com</a></li>
+            <li><i class="fa-solid fa-phone"></i> <strong>Téléphone :</strong> 418 554-5828</li>
+            <li><i class="fa-solid fa-location-dot"></i> <strong>Ville :</strong> Québec (QC)</li>
+        </ul>
+    </section>
+
+    <section class="skills">
+        <h3>Compétences</h3>
+
+        <h4>Développement full stack</h4>
+        <ul>
+            <li><strong>Interface :</strong> TypeScript, React 18, Vite, TanStack Router et Query, CSS Modules, SCSS, HTML5, CSS3 (BEM, Flexbox, Grid), JavaScript modulaire, design réactif (mobile d'abord, dès 320 px)</li>
+            <li><strong>Application hors ligne :</strong> PWA installable, service worker, dnd-kit, Quill</li>
+            <li><strong>Serveur et données :</strong> Node.js, Fastify 5, Zod 4, Drizzle ORM, PostgreSQL sur Supabase (région Montréal), migrations additives et rétrocompatibles</li>
+            <li><strong>CMS et PHP :</strong> WordPress sur mesure (ACF Pro), PHP, TYPO3</li>
+            <li><strong>Accessibilité :</strong> conformité WCAG, structure sémantique claire, navigation au clavier</li>
+        </ul>
+
+        <h4>Intégrations, IA et agents de programmation</h4>
+        <ul>
+            <li><strong>Modèles et API d'IA en production :</strong> SDK Anthropic (Claude Sonnet 4.6, Haiku 4.5), SDK OpenAI (GPT-4o-mini, Whisper), prompts versionnés, suivi des coûts en dollars</li>
+            <li><strong>Direction d'agents en parallèle :</strong> Claude Code (Anthropic) et Cursor en plans principaux au quotidien ; OpenAI Codex et Google Gemini en plans Pro pour la contre-vérification et les revues croisées</li>
+            <li><strong>Encadrement des agents :</strong> 33 protocoles écrits avec phrases de déclenchement, fichier <code>CLAUDE.md</code> par projet, hooks de pré-validation, index des erreurs par symptôme et registre des sujets déjà tranchés</li>
+            <li><strong>Connexion, paiement et services :</strong> Clerk, Stripe (abonnements, achats à l'unité, webhooks signés), Microsoft Graph (OAuth Outlook), AWS SES v2 et S3, Postmark, Resend, Twilio, Web Push</li>
+        </ul>
+
+        <h4>Qualité, hébergement et mesure</h4>
+        <ul>
+            <li><strong>Tests et CI :</strong> Vitest, Testing Library, Playwright (E2E multi-appareils sur base Postgres jetable), GitHub Actions, Dependabot</li>
+            <li><strong>Hébergement et surveillance :</strong> Fly.io, Cloudflare Pages, WP Engine, Sentry, UptimeRobot, sauvegardes en 3 couches et tests de restauration</li>
+            <li><strong>Analyse et média par code :</strong> API GA4, Search Console, API Meta, Google Business Profile ; chaîne de montage vidéo générée par Playwright selon des recettes professionnelles, trames sonores SUNO (<a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank"><strong>voir mes montages vidéo récents en 16:9 et 9:16</strong></a>)</li>
+        </ul>
+    </section>
+
+    <section class="projects">
+        <h3>Projets et réalisations en production</h3>
+
+        <div class="highlight">
+            <h4>DonkeyNote : SaaS de gestion de missions (matrice Eisenhower) <span class="date">Septembre 2025 à aujourd'hui (en production)</span></h4>
+            <p><a href="https://donkeynote.app" target="_blank"><strong>https://donkeynote.app</strong></a> · 1 491 commits · En production depuis août 2026 · <a href="https://jeffduval1.github.io/portfolio/?video=cote-qui-range" target="_blank" style="white-space: nowrap;"><strong>🎬 Capsule « La cote qui range »</strong></a></p>
+            <ul>
+                <li>React 18, TypeScript, Vite, TanStack Router et Query, Fastify 5, Zod 4, Drizzle ORM, PostgreSQL sur Supabase (Montréal), hébergé sur Fly.io et Cloudflare Pages</li>
+                <li>Classificateur de notes par IA avec file de revue (acceptation automatique au-delà de 0,92 de confiance) et dictée vocale Whisper vendue par forfait de 60 minutes via Stripe</li>
+                <li>Synchronisation OAuth avec l'agenda Outlook (Microsoft Graph, détection des doublons) et rappels par courriel (AWS SES), notification push et SMS (réservation en base contre les doublons)</li>
+                <li>Abonnements Stripe à 5 paliers vérifiés côté serveur ; PWA hors ligne avec 4 filets contre l'écran blanc ; bilingue FR/EN ; corbeille, export et import en 3 stratégies avec copie de sécurité</li>
+                <li>Près de 2 000 tests unitaires et serveur (Vitest, Testing Library) et environ 300 tests E2E Playwright sur base Postgres jetable</li>
+                <li>Revue de résilience de novembre 2026 (13 réparations en ligne, garde sur la limite de débit Fastify), collecteur quotidien de 31 mesures, sauvegardes en 3 couches testées sur 93 tables</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <h4>Propulsion Numérique : mon agence web et ses 7 moteurs et outils <span class="date">Mai 2026 à aujourd'hui (en production)</span></h4>
+            <p><a href="https://propulsion-numerique.ca" target="_blank"><strong>https://propulsion-numerique.ca</strong></a> · 2 028 commits · <a href="https://jeffduval1.github.io/portfolio/?video=test-de-la-vue" target="_blank" style="white-space: nowrap;"><strong>🎬 Capsule « Le test de la vue »</strong></a> · <a href="https://jeffduval1.github.io/portfolio/?video=des-formulaires" target="_blank" style="white-space: nowrap;"><strong>🎬 Capsule « Des formulaires pour tout »</strong></a></p>
+            <ul>
+                <li><strong>Boussole entrepreneuriale</strong> (<a href="https://propulsion-numerique.ca/bilan-web-gratuit/" target="_blank">https://propulsion-numerique.ca/bilan-web-gratuit/</a>) : questionnaire de qualification de 33 questions avec lecture personnalisée générée par l'IA (prompt v1.41 versionné et gelé) et suivi d'abandon question par question dans GA4</li>
+                <li><strong>Moteur éditorial 2.0 (en préparation · sortie prochaine) :</strong> génération d'articles dans la voix propre d'une entreprise (plus de 200 décisions de conception consignées avant le code, voix décortiquée sur bancs d'essai)</li>
+                <li><strong>Moteur social :</strong> extension WordPress avec façade en React 18, TypeScript et Vite (calendrier de publications, récurrences à paliers progressifs, suivi publicitaire, multi-entreprises, installable par simple .zip)</li>
+                <li><strong>Moteur de soumissions et surcouche courriel :</strong> pipeline de 9 étapes (normalisation, assainissement, validation, jeton JS, piège à robots, limite de débit, idempotence, enregistrement, envoi Postmark avec webhooks)</li>
+                <li><strong>Portail statistiques et collecte Meta / GA4 par API :</strong> 7 sources interrogées par API (base de données du site, Postmark, GA4 par compte de service, Search Console, Meta par jeton, Google Business Profile, WP Engine), historique CSV cumulatif avec rattrapage de 30 jours, bilan courriel tous les 3 jours et <strong>catalogue de sections</strong> réutilisables</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <h4>Certi-Pro : site sur mesure et outils IA d'un garage automobile (client réel) <span class="date">Janvier 2026 à aujourd'hui (en production)</span></h4>
+            <p><a href="https://certi-pro.ca" target="_blank"><strong>https://certi-pro.ca</strong></a> · 721 commits · En production depuis août 2026 · <a href="https://jeffduval1.github.io/portfolio/?video=rappel-entretien" target="_blank" style="white-space: nowrap;"><strong>🎬 Capsule « Rappel d'entretien »</strong></a> · <a href="https://jeffduval1.github.io/portfolio/?video=formulaire-rdv" target="_blank" style="white-space: nowrap;"><strong>🎬 Capsule « Formulaire RDV »</strong></a></p>
+            <ul>
+                <li><strong>Moteur de calendrier d'entretien par IA (intégré à l'étape 2 du formulaire de prise de rendez-vous) :</strong> le client entre son véhicule ; Claude Sonnet cherche en ligne le calendrier réel du constructeur, le code calcule la priorité (jamais l'IA), Claude Haiku rédige avec sources et niveau de confiance obligatoires ; tâches asynchrones et coût suivi en dollars</li>
+                <li><strong>7 formulaires métier :</strong> étapes multiples, validation conditionnelle (NIV obligatoire selon le service) et liens profonds préremplis</li>
+                <li><strong>Protocole d'entretien par IA :</strong> entretien mensuel en 6 phases et 52 points de contrôle avec collecte automatique, preuves obligatoires et contre-vérification par un second agent</li>
+                <li><strong>Moteur de blog assisté par IA :</strong> 6 patrons de contenu, accroches générées par l'IA, suggestions de maillage interne, 3 mises en page et 8 commandes en ligne de commande pour le traitement par lots</li>
+            </ul>
+        </div>
+
+        <div class="highlight">
+            <h4>Autres projets de l'écosystème Donkey : Donkey Study et Donkey Life <span class="date">2026</span></h4>
+            <ul>
+                <li><strong>Donkey Study :</strong> tableau de bord d'études pour le cégep et l'université (notes de cours, cartes d'étude, rappels de révision jusqu'à l'examen, PWA bilingue, pipeline d'entrées durci avec Zod, piège à robots et limite de débit)</li>
+                <li><strong>Donkey Life :</strong> application mobile de cheminement personnel (les sphères de sa vie et une découverte de soi par la philosophie)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="experience">
+        <h3>Expérience professionnelle</h3>
+
+        <div class="bloc-poste">
+            <h4>MELCCFP : ministère de l'Environnement (Gouvernement du Québec) <span class="date">Avril 2024 à présent</span></h4>
+            <ul>
+                <li>Réalisation des demandes web émanant des conseillers en communication</li>
+                <li>Assurance qualité des demandes pour respecter les meilleurs standards du web</li>
+                <li>Intégration dans les sites du ministère en utilisant SharePoint Designer pour l'ancien site et TYPO3 pour la majorité du contenu migré</li>
+                <li>Développement de formulaires pour faciliter les interactions entre l'équipe web et les conseillers</li>
+                <li>Implication active dans les dossiers liés à l'accessibilité du web</li>
+            </ul>
+        </div>
+
+        <div class="bloc-poste">
+            <h4>MAMH : ministère des Affaires municipales et de l'Habitation (Gouvernement du Québec) <span class="date">2021-2024</span></h4>
+            <ul>
+                <li>Intégration continue avec TYPO3 dans un environnement normé</li>
+                <li>Participation à la refonte de l'intranet et à la migration vers Québec.ca</li>
+                <li>Tests d'accessibilité, détection de liens brisés, rédaction de procédures</li>
+                <li>Collaboration régulière avec développeurs, chargés de projets et collègues en UX</li>
+            </ul>
+        </div>
+
+        <div class="bloc-poste">
+            <h4>Expériences d'un passé lointain <span class="date">2000-2020</span></h4>
+            <ul>
+                <li>10 ans comme préposé aux bénéficiaires en CHSLD</li>
+                <li>8 ans en cuisine d'établissement</li>
+                <li>Un petit tour à la SAQ durant la pandémie pour parfaire mes connaissances des vins</li>
+                <li>Mandats ponctuels en création de contenu (photo, vidéo, réseaux sociaux)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="education">
+        <h3>Formation</h3>
+        <h4>Techniques d'intégration multimédia : Cégep de Sainte-Foy <span class="date">2020-2023</span></h4>
+    </section>
+
+    <section class="qualities">
+        <h3>Qualités professionnelles</h3>
+        <ul>
+            <li>Communication claire et collaboration efficace</li>
+            <li>Autonome, discipliné, éthique de travail</li>
+            <li>Apprentissage rapide et structuré</li>
+            <li>Souci du détail, respect des échéanciers</li>
+        </ul>
+    </section>
+
+    <section class="languages">
+        <h3>Langues</h3>
+        <ul>
+            <li>Français : langue maternelle</li>
+            <li>Anglais : avancé (lu, écrit, documentation technique)</li>
+        </ul>
+    </section>
+
+    <section class="interests">
+        <h3>Sur une note plus personnelle</h3>
+        <ul>
+            <li>Beau-père de 4 enfants et propriétaire de maison</li>
+            <li>J'aime les gens avec du cœur, tout est plus facile</li>
+            <li>On ne s'ennuie pas avec moi, bon sens de l'humour</li>
+            <li>Je pratique les arts martiaux depuis plus de 20 ans et j'aime les sports en général</li>
+            <li>Pourquoi pas un mini-golf, un karting, aller aux pommes...</li>
+        </ul>
+    </section>
+
+</body>
+
+</html>
