@@ -4,16 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jean-François Duval | Intégrateur Web</title>
+  <title>Jean-François Duval | Développeur full stack TypeScript · IA et agents de programmation</title>
   <meta name="description"
-    content="Portfolio de Jean-François Duval, intégrateur web spécialisé en accessibilité, responsive design et développement moderne.">
+    content="Portfolio de Jean-François Duval, développeur full stack TypeScript et React (SaaS DonkeyNote, Propulsion Numérique, Certi-Pro), intégration d'IA en production et direction d'agents de programmation.">
 
   <!-- Polices -->
   <link
-    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&family=Inter:wght@400;600&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600;700&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-
 </head>
 
 <body>
@@ -26,235 +25,307 @@
           <span class="nom">Duval</span>
         </h1>
         <div class="ligne-accent"></div>
-        <h2 class="soustitre-fonction">Intégrateur web orienté <span class="accent">JavaScript</span></h2>
+        <h2 class="soustitre-fonction">Développeur full stack <span class="accent">TypeScript</span> · IA et agents de programmation</h2>
         <p class="soustitre accentuee">
-          <span class="ligne1">Vibrant <span class="point">•</span> Solide</span>
-          <span class="ligne2">Centré utilisateur</span>
+          <span class="ligne1">Produits en production <span class="point">•</span> Architecture solide</span>
+          <span class="ligne2">Direction d'agents IA</span>
         </p>
+        <div class="hero-actions">
+          <a href="#projets" class="btn-primaire">Découvrir mes produits en ligne</a>
+          <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="btn-secondaire">🎬 Voir mes montages vidéo (16:9 et 9:16)</a>
+        </div>
       </div>
     </div>
-
   </header>
+
   <!-- Bouton hamburger (mobile uniquement) -->
   <button id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
-
-
 
   <!-- Overlay (fond semi-transparent quand le menu est ouvert) -->
   <div id="overlay" tabindex="-1"></div>
 
-  <!-- Menu latéral -->
+  <!-- Menu principal -->
   <div class="div-nav">
     <nav id="menu" role="navigation" aria-label="Menu principal">
       <button id="closeMenu" aria-label="Fermer le menu">✕</button>
       <ul>
         <li><a href="#projets">Projets</a></li>
+        <li><a href="#methode">Façon de travailler</a></li>
         <li><a href="#competences">Compétences</a></li>
         <li><a href="#a-propos">À propos</a></li>
-        <li><a href="#cv">CV</a></li>
+        <li><a href="#cv">CV et vidéos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </div>
+
   <main>
     <section id="projets" aria-labelledby="titre-projets" data-clair>
-      <h2 id="titre-projets" class="section-titre">Mes projets</h2>
+      <h2 id="titre-projets" class="section-titre">Projets et réalisations en production</h2>
+
+      <!-- 01. DonkeyNote -->
       <div class="conteneur-projet">
         <article class="carte-projet">
-
           <div class="images-projet">
-            <img src="images/projets/eventually/vue-categories.png" alt="Aperçu de l’interface Eventually"
+            <img src="images/projets/2026/donkeynote-interface.png" alt="Interface desktop de DonkeyNote montrant les Flows et la matrice Eisenhower"
+              class="image-projet-pleine">
+            <img src="images/projets/2026/donkeynote-bleu.png" alt="Thème bleu de DonkeyNote avec les missions classées par cote"
+              class="image-projet-pleine image-secondaire">
+            <p class="caption-img"><em>Cliquer sur une capture pour l'agrandir</em></p>
+          </div>
+
+          <div class="infos-projet">
+            <div class="entete-carte-projet">
+              <span class="badge-statut badge-prod">En production · 1 491 commits</span>
+              <span class="periode-projet">Septembre 2025 à aujourd'hui</span>
+            </div>
+            <h3 class="titre-projet">01 · DonkeyNote : SaaS de gestion de missions (matrice Eisenhower)</h3>
+            <p class="liens-projet">
+              <a href="https://donkeynote.app" target="_blank" rel="noopener noreferrer" class="lien-action">🌐 https://donkeynote.app</a>
+              <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="lien-action lien-video">🎬 Voir la capsule « La cote qui range »</a>
+            </p>
+            <p class="description-projet"><strong>Description du produit :</strong> SaaS complet de gestion de missions et de prise de notes conçu, développé et exploité de bout en bout. L'utilisateur attribue une cote de 1 à 10 à chaque mission, et la matrice Eisenhower la classe automatiquement dans le bon cadran, avec ajustement selon l'échéance.</p>
+            <p class="techno-projet"><strong>Stack utilisé :</strong> React 18, TypeScript, Vite, TanStack Router et Query, CSS Modules, dnd-kit, Quill, PWA et service worker · Node.js, Fastify 5, Zod 4, Drizzle ORM, PostgreSQL sur Supabase (Montréal) · SDK Anthropic (Claude), SDK OpenAI (Whisper) · Clerk, Stripe, Microsoft Graph, AWS SES v2 et S3, Resend, Twilio, Web Push · Fly.io, Cloudflare Pages, Vitest, Playwright, Sentry</p>
+
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                <span>⚙️ Architecture et fonctionnalités en production (11 volets)</span>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <ul class="liste-fonctionnalites">
+                  <li><span class="emoji">🤖</span><span><strong>Classificateur IA :</strong> chaque note est classée dans la bonne catégorie par l'IA, avec file de revue et acceptation automatique au-delà de 0,92 de confiance.</span></li>
+                  <li><span class="emoji">🎙️</span><span><strong>Dictée Whisper :</strong> transcription vocale dans les notes et les missions, vendue par forfait de 60 minutes à l'unité par Stripe.</span></li>
+                  <li><span class="emoji">📅</span><span><strong>Synchronisation Outlook :</strong> OAuth Microsoft Graph, rendez-vous et séries sur le même jour civil des deux côtés, détection des doublons.</span></li>
+                  <li><span class="emoji">🔔</span><span><strong>Rappels sans doublons :</strong> courriel (AWS SES), notification push et SMS avec réservation en base avant le départ entre deux serveurs.</span></li>
+                  <li><span class="emoji">💳</span><span><strong>Abonnements et droits :</strong> Stripe à 5 paliers d'accès, webhooks signés et droits vérifiés côté serveur.</span></li>
+                  <li><span class="emoji">📴</span><span><strong>PWA hors ligne et bilingue FR/EN :</strong> quatre filets contre l'écran blanc après mise à jour, corbeille et import/export en 3 stratégies avec copie de sécurité.</span></li>
+                  <li><span class="emoji">🧪</span><span><strong>Tests et résilience :</strong> près de 2 000 tests unitaires et serveur (Vitest) et environ 300 tests E2E Playwright (iPhone SE 320 px, iPhone SE, iPhone 14) sur base Postgres jetable ; sauvegardes en 3 couches testées sur 93 tables.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 02. Propulsion Numérique -->
+      <div class="conteneur-projet">
+        <article class="carte-projet">
+          <div class="images-projet">
+            <img src="images/projets/2026/propulsion-numerique-accueil.png" alt="Page d'accueil de Propulsion Numérique"
+              class="image-projet-pleine">
+            <img src="images/projets/2026/boussole-test-vue.png" alt="Capsule vidéo Le test de la vue pour la Boussole entrepreneuriale"
+              class="image-projet-pleine image-secondaire">
+            <p class="caption-img"><em>Cliquer sur une capture pour l'agrandir</em></p>
+          </div>
+
+          <div class="infos-projet">
+            <div class="entete-carte-projet">
+              <span class="badge-statut badge-prod">En production · 2 028 commits</span>
+              <span class="periode-projet">Mai 2026 à aujourd'hui</span>
+            </div>
+            <h3 class="titre-projet">02 · Propulsion Numérique : mon agence web et ses moteurs logiciels</h3>
+            <p class="liens-projet">
+              <a href="https://propulsion-numerique.ca" target="_blank" rel="noopener noreferrer" class="lien-action">🌐 https://propulsion-numerique.ca</a>
+              <a href="https://propulsion-numerique.ca/bilan-web-gratuit/" target="_blank" rel="noopener noreferrer" class="lien-action">🧭 Boussole entrepreneuriale</a>
+            </p>
+            <p class="description-projet"><strong>Description du projet :</strong> Mon agence web québécoise. Au-delà d'un thème WordPress sur mesure, j'y ai bâti un écosystème de moteurs logiciels autonomes conçus dès le départ pour être installés et vendus séparément chez des clients tiers.</p>
+            <p class="techno-projet"><strong>Stack utilisé :</strong> WordPress sur mesure, ACF Pro, PHP, SCSS, JavaScript modulaire · Moteur social : React 18, TypeScript, Vite · Modèles et API d'IA : Anthropic Claude (Sonnet 4.6, Haiku 4.5), OpenAI · WP Engine (prod et staging), GitHub Actions, Postmark (webhooks), GA4, Meta Pixel, Consent Mode v2</p>
+
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                <span>⚙️ Les 7 moteurs et outils de Propulsion Numérique</span>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <ul class="liste-fonctionnalites">
+                  <li><span class="emoji">🧭</span><span><strong>Boussole entrepreneuriale (<a href="https://propulsion-numerique.ca/bilan-web-gratuit/" target="_blank" rel="noopener noreferrer">en ligne</a>) :</strong> questionnaire de qualification de 33 questions qui bifurque selon qu'on a un site ou non, lecture personnalisée générée par l'IA (prompt v1.41 versionné et gelé) et suivi d'abandon question par question dans GA4.</span></li>
+                  <li><span class="emoji">✍️</span><span><strong>Moteur éditorial 2.0 (en préparation · sortie prochaine) :</strong> l'outil qui écrit les articles d'une entreprise dans sa propre voix ; plus de 200 décisions de conception consignées avant d'écrire le code et voix décortiquée sur bancs d'essai.</span></li>
+                  <li><span class="emoji">📲</span><span><strong>Moteur social :</strong> extension WordPress avec façade en React 18, TypeScript et Vite (calendrier de publications, récurrences à paliers progressifs, suivi des publicités, multi-entreprises, installation par simple .zip).</span></li>
+                  <li><span class="emoji">🛡️</span><span><strong>Moteur de soumissions et surcouche courriel :</strong> pipeline de 9 étapes (normalisation, assainissement, validation, jeton JS, piège à robots, limite de débit, idempotence, enregistrement, envoi Postmark avec journal et webhooks).</span></li>
+                  <li><span class="emoji">📊</span><span><strong>Portail statistiques :</strong> 7 sources interrogées par API (base de données du site, Postmark, GA4, Search Console, Meta, Google Business Profile, WP Engine), historique CSV cumulatif avec rattrapage de 30 jours et bilan écrit envoyé par courriel tous les 3 jours.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 03. Certi-Pro -->
+      <div class="conteneur-projet">
+        <article class="carte-projet">
+          <div class="images-projet">
+            <img src="images/projets/2026/certi-pro-accueil.webp" alt="Page d'accueil du garage Certi-Pro à Charlesbourg"
+              class="image-projet-pleine">
+            <img src="images/projets/2026/certi-pro-calendrier-ia.png" alt="Moteur de calendrier d'entretien par IA chez Certi-Pro"
+              class="image-projet-pleine image-secondaire">
+            <p class="caption-img"><em>Cliquer sur une capture pour l'agrandir</em></p>
+          </div>
+
+          <div class="infos-projet">
+            <div class="entete-carte-projet">
+              <span class="badge-statut badge-prod">En production · 721 commits</span>
+              <span class="periode-projet">Janvier 2026 à aujourd'hui</span>
+            </div>
+            <h3 class="titre-projet">03 · Certi-Pro : site sur mesure et outils IA d'un garage automobile</h3>
+            <p class="liens-projet">
+              <a href="https://certi-pro.ca" target="_blank" rel="noopener noreferrer" class="lien-action">🌐 https://certi-pro.ca</a>
+              <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="lien-action lien-video">🎬 Voir les capsules RDV et Rappel d'entretien</a>
+            </p>
+            <p class="description-projet"><strong>Description du projet :</strong> Site sur mesure d'un garage automobile de Charlesbourg (client réel), en production depuis août 2026 et sous contrat d'entretien mensuel.</p>
+            <p class="techno-projet"><strong>Stack utilisé :</strong> WordPress sur mesure, ACF Pro, PHP, SCSS, JavaScript modulaire · Fichiers JSON à écriture atomique · Modèles et API d'IA : Anthropic Claude (Sonnet 4.6, Haiku 4.5), OpenAI GPT-4o-mini · WP Engine, Cloudflare, GitHub Actions, Postmark, API Pexels, GA4, Consent Mode v2</p>
+
+            <div class="accordion">
+              <button class="accordion-header" type="button">
+                <span>⚙️ Outils IA et systèmes livrés pour Certi-Pro</span>
+                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9l6 6 6-6" />
+                </svg>
+              </button>
+              <div class="accordion-content">
+                <ul class="liste-fonctionnalites">
+                  <li><span class="emoji">🔧</span><span><strong>Moteur de calendrier d'entretien par IA (actif) :</strong> le client entre son véhicule ; Claude Sonnet cherche en ligne le calendrier réel du constructeur, le code calcule la priorité (jamais l'IA), et Claude Haiku rédige avec sources et niveau de confiance obligatoires. Coût d'usage suivi en dollars.</span></li>
+                  <li><span class="emoji">📋</span><span><strong>7 formulaires métier :</strong> rendez-vous, forfaits, compagnie, policiers et militaires, PromoLoco, carrière (envoi de CV), plainte. Étapes multiples, validation conditionnelle (NIV obligatoire selon le service) et liens profonds préremplis.</span></li>
+                  <li><span class="emoji">🔍</span><span><strong>Protocole d'entretien par IA :</strong> entretien mensuel en 6 phases et 52 points de contrôle avec collecte automatique, preuves obligatoires et contre-vérification par un second agent.</span></li>
+                  <li><span class="emoji">📰</span><span><strong>Moteur de blog assisté par IA :</strong> 6 patrons de contenu, accroches générées par l'IA, suggestions de maillage interne, 3 mises en page et 8 commandes en ligne de commande pour le traitement par lots.</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- 05. Autres projets de l'écosystème Donkey -->
+      <div class="conteneur-projet">
+        <article class="carte-projet">
+          <div class="images-projet">
+            <img src="images/projets/2026/donkeynote-vignette.png" alt="Identité visuelle de l'écosystème Donkey"
               class="image-projet-pleine">
           </div>
 
-
           <div class="infos-projet">
-            <h3 class="titre-projet">Outil d'organisation "Eventually" </h3>
-            <p class="description-projet"><strong>Description du projet :</strong> Cet outil web personnel permet de
-              centraliser,
-              classer et retrouver efficacement des notes ou idées à l’aide d’un système de catégories imbriquées. Pensé
-              pour une utilisation quotidienne, il combine une interface simple à une logique structurée et visuelle.
-            </p>
-            <p class="techno-projet"><strong>Technologies&nbsp;:</strong> HTML, CSS, JavaScript, Formspree, Responsive
-            </p>
-
-            <div class="accordion">
-              <button class="accordion-header">
-                <span>⚙️ Fonctionnalités principales</span>
-                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-              <div class="accordion-content">
-                <ul class="liste-fonctionnalites">
-                  <li><span class="emoji">✅</span><span>Ajout, modification et suppression de notes</span></li>
-                  <li><span class="emoji">📂</span><span>Création de catégories imbriquées à plusieurs niveaux</span>
-                  </li>
-                  <li><span class="emoji">🎨</span><span>Choix de couleurs pour identifier visuellement les
-                      catégories</span></li>
-                  <li><span class="emoji">📤</span><span>Import/export complet des données (JSON)</span></li>
-                  <li><span class="emoji">🗑</span><span>Corbeille temporaire pour récupérer les notes supprimées</span>
-                  </li>
-                  <li><span class="emoji">🔍</span><span>Filtres dynamiques par catégorie et vue adaptative selon
-                      l’écran</span></li>
-                  <li><span class="emoji">📱</span><span>Interface mobile avec navigation par vue dédiée</span></li>
-                  <li><span class="emoji">🖥️</span><span>Interface desktop en double panneau (catégories +
-                      notes)</span></li>
-                </ul>
-              </div>
+            <div class="entete-carte-projet">
+              <span class="badge-statut badge-eco">Écosystème Donkey</span>
+              <span class="periode-projet">2026</span>
             </div>
+            <h3 class="titre-projet">04 · Autres projets : Donkey Study et Donkey Life</h3>
+            <p class="description-projet"><strong>Description :</strong> Deux applications complémentaires bâties sur le même socle moderne que DonkeyNote.</p>
+            <p class="techno-projet"><strong>Stack utilisé :</strong> React 18, TypeScript, Vite, Fastify, Drizzle ORM, Supabase/Postgres, Clerk, Zod</p>
+            <ul class="liste-fonctionnalites liste-directe">
+              <li><span class="emoji">🎓</span><span><strong>Donkey Study :</strong> tableau de bord d'études pour le cégep et l'université (notes de cours, cartes d'étude, rappels de révision jusqu'à l'examen, PWA bilingue, pipeline d'entrées durci avec Zod, piège à robots et limite de débit).</span></li>
+              <li><span class="emoji">🧭</span><span><strong>Donkey Life :</strong> application mobile de cheminement personnel (les sphères de sa vie et une découverte de soi par la philosophie).</span></li>
+            </ul>
           </div>
         </article>
       </div>
+    </section>
 
+    <!-- Section Ma façon de travailler -->
+    <section id="methode" aria-labelledby="titre-methode" data-clair>
+      <h2 id="titre-methode" class="section-titre">Ma façon de travailler : agents IA et motion design par code</h2>
       <div class="conteneur-projet">
         <article class="carte-projet">
-
           <div class="images-projet">
-            <img class="image-projet-pleine logo-angular" src="/images/logos/angular-express.png" alt="">
-            <p class="caption-img"><em>Le projet en est à ses premières étapes, avec une attention particulière portée à la solidité
-                de l’architecture</em></caption>
+            <img src="images/projets/2026/motion-design-3a.png" alt="Capsule en motion design Des formulaires pour tout"
+              class="image-projet-pleine">
+            <img src="images/projets/2026/propulsion-formulaires.png" alt="Planche de repérage et captures pleine page pour le montage par code"
+              class="image-projet-pleine image-secondaire">
           </div>
 
-
           <div class="infos-projet">
-            <h3 class="titre-projet">Gestionnaire de cartes de révision <br>Memo-Connect</h3>
-            <p><a href="https://trello.com/b/E0HVTX14/m%C3%A9mo-connect#">Lien vers le Kanban du projet</a></p>
-            <p class="description-projet"><strong>Description du projet :</strong> Memo-Connect est une application web
-              de gestion de cartes de révision pensée pour l’apprentissage actif, en solo ou en collaboration. Elle
-              permet de créer, organiser, filtrer et étudier des cartes mémoire de manière structurée, avec une
-              interface moderne et responsive.
-
-              Développée avec Angular pour le frontend et Express.js pour le backend, l’application repose sur une
-              architecture modulaire évolutive. Elle inclut un système d’authentification, une API REST sécurisée, et
-              prévoit l’intégration de fonctionnalités avancées telles que le suivi de sessions d’étude, l’analyse des
-              performances et la révision espacée.
+            <h3 class="titre-projet">Direction d'agents en parallèle et chaîne de montage vidéo maison</h3>
+            <p class="liens-projet">
+              <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer" class="lien-action lien-video">🎬 Dossier OneDrive : 10 montages récents (formats 16:9 et 9:16)</a>
             </p>
-            <p class="techno-projet"><strong>Technologies&nbsp;:</strong> Angular.js, SASS, TypeScript, Node.js,
-              Express.js, REST API, MongoDB, Git + Github</p>
-
-            <div class="accordion">
-              <button class="accordion-header">
-                <span>⚙️ Fonctionnalités principales</span>
-                <svg class="chevron" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor"
-                  stroke-width="2">
-                  <path d="M6 9l6 6 6-6" />
-                </svg>
-              </button>
-              <div class="accordion-content">
-                <ul class="liste-fonctionnalites">
-                  <li><span class="emoji">✅</span><span>Création, modification et suppression de cartes de
-                      révision</span></li>
-                  <li><span class="emoji">🗂️</span><span>Organisation des cartes par catégories hiérarchiques</span>
-                  </li>
-                  <li><span class="emoji">🏷️</span><span>Ajout de tags pour filtrer les cartes selon plusieurs
-                      critères</span></li>
-                  <li><span class="emoji">🔁</span><span>Mode révision avec navigation séquentielle ou aléatoire</span>
-                  </li>
-                  <li><span class="emoji">🔍</span><span>Recherche instantanée dans les cartes (titre, contenu,
-                      tags)</span></li>
-                  <li><span class="emoji">🎯</span><span>Système de filtres dynamiques par catégorie et tag
-                      combiné</span></li>
-                  <li><span class="emoji">📱</span><span>Interface responsive avec navigation adaptée aux écrans
-                      mobiles</span></li>
-                  <li><span class="emoji">🔐</span><span>Authentification utilisateur (à venir)</span></li>
-                  <li><span class="emoji">📊</span><span>Suivi des sessions de révision (à venir)</span></li>
-                  <li><span class="emoji">⏰</span><span>Révision espacée avec priorisation intelligente (prévu)</span>
-                  </li>
-                  <li><span class="emoji">☁️</span><span>Stockage cloud sécurisé (prévu)</span></li>
-                  <li><span class="emoji">📤</span><span>API REST pour synchronisation des données (en cours)</span>
-                  </li>
-                </ul>
-
-              </div>
-            </div>
+            <p class="techno-projet"><strong>Outils :</strong> Claude Code (Anthropic), Cursor, OpenAI Codex, Google Gemini · Fichiers <code>CLAUDE.md</code>, hooks de pré-validation, 33 protocoles écrits · Playwright, SUNO</p>
+            <ul class="liste-fonctionnalites liste-directe">
+              <li><span class="emoji">📐</span><span><strong>33 protocoles écrits et gouvernance stricte :</strong> chaque protocole possède sa phrase de déclenchement (commits, erreurs, révision par tours, rangement, tests, entretien, lancement). Chaque agent reçoit son contexte par écrit (<code>CLAUDE.md</code>, hooks, index des erreurs par symptôme, registre des sujets déjà tranchés).</span></li>
+              <li><span class="emoji">🔀</span><span><strong>Plusieurs agents en parallèle et revues croisées :</strong> Claude Code et Cursor en plans principaux au quotidien ; Codex et Gemini en plans Pro pour la contre-vérification systématique du travail d'un premier agent.</span></li>
+              <li><span class="emoji">🎬</span><span><strong>Montage avancé et motion design par code :</strong> chaîne maison où rien n'est filmé à la caméra. Les clips de démonstration sont générés par Playwright selon des recettes professionnelles (courbes, durées mesurées, rapproché progressif, étalonnage, recomposition 16:9 et 9:16, trames sonores SUNO).</span></li>
+            </ul>
           </div>
         </article>
       </div>
-      <div class="conteneur-projet">
-        <article class="carte-projet">
-
-          <div class="images-projet">
-            <img src="images/projets/tim/tim_accueil.png" alt="Aperçu de l’interface TIM" class="image-projet-pleine">
-          </div>
-          <div class="infos-projet">
-            <h3 class="titre-projet">Site du programme TIM</h3>
-            <p class="description-projet"><strong>Description du projet :</strong> Le projet final du programme
-              consistait à
-              refaire
-              le site de la technique en utilisant les apprentissages accumulés en design, intégration et programmation.
-            </p>
-            <p class="techno-projet"><strong>Technologies&nbsp;:</strong> HTML, CSS, JavaScript, PHP, MVC, Blade, Sass,
-              Figma, bases de données</p>
-
-          </div>
-        </article>
-      </div>
-      <!-- Tu peux dupliquer l’article autant de fois que tu veux -->
     </section>
 
     <section id="competences" aria-labelledby="titre-competences" data-clair>
       <h2 id="titre-competences" class="section-titre">Compétences</h2>
-      <ul>
-        <li>HTML5, CSS3 (BEM, SASS Flexbox, Grid), JavaScript (vanilla), Responsive Design / Mobile-first</li>
-        <li>Backend : PHP (base), Node.js (en exploration)</li>
-        <li>Frameworks : Exploration de React.js et Vue.js; apprentissage en cours d’Angular</li>
-        <li>Bases de données & stockage : MySQL, indexedDB, localStorage</li>
-        <li>Outils : Git, GitHub, Suite Adobe, Figma, Formspree</li>
-        <li>CMS : TYPO3, WordPress (bases)</li>
-        <li>Analyse & suivi : Google Analytics 4, Looker Studio (intermédiaire), UTM, suivi des événements</li>
-        <li>Accessibilité : Conformité WCAG, tableaux accessibles, structure sémantique claire</li>
-      </ul>
+      <div class="grille-competences">
+        <div class="carte-competence">
+          <h3>Développement full stack</h3>
+          <ul>
+            <li><strong>Interface :</strong> TypeScript, React 18, Vite, TanStack Router et Query, CSS Modules, SCSS, HTML5, CSS3 (BEM, Flexbox, Grid), JavaScript modulaire, design réactif dès 320 px</li>
+            <li><strong>Application hors ligne :</strong> PWA installable, service worker, dnd-kit, Quill</li>
+            <li><strong>Serveur et données :</strong> Node.js, Fastify 5, Zod 4, Drizzle ORM, PostgreSQL sur Supabase (Montréal), migrations additives et rétrocompatibles</li>
+            <li><strong>CMS et PHP :</strong> WordPress sur mesure (ACF Pro), PHP, TYPO3</li>
+            <li><strong>Accessibilité :</strong> conformité WCAG, structure sémantique claire, navigation au clavier</li>
+          </ul>
+        </div>
+
+        <div class="carte-competence">
+          <h3>IA, agents et intégrations</h3>
+          <ul>
+            <li><strong>Modèles et API d'IA en production :</strong> SDK Anthropic (Claude Sonnet 4.6, Haiku 4.5), SDK OpenAI (GPT-4o-mini, Whisper), prompts versionnés, suivi des coûts en dollars</li>
+            <li><strong>Direction d'agents :</strong> Claude Code, Cursor, OpenAI Codex, Google Gemini, revues croisées, 33 protocoles écrits</li>
+            <li><strong>Connexion, paiement et services :</strong> Clerk, Stripe (abonnements, achats à l'unité, webhooks signés), Microsoft Graph (OAuth Outlook), AWS SES v2 et S3, Postmark, Resend, Twilio, Web Push</li>
+          </ul>
+        </div>
+
+        <div class="carte-competence">
+          <h3>Qualité, hébergement et mesure</h3>
+          <ul>
+            <li><strong>Tests et CI :</strong> Vitest, Testing Library, Playwright (E2E multi-appareils sur base Postgres jetable), GitHub Actions, Dependabot</li>
+            <li><strong>Hébergement et surveillance :</strong> Fly.io, Cloudflare Pages, WP Engine, Sentry, UptimeRobot, sauvegardes en 3 couches et tests de restauration</li>
+            <li><strong>Analyse et média par code :</strong> API GA4, Search Console, API Meta, Google Business Profile ; montage vidéo par Playwright, SUNO</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="a-propos" aria-labelledby="titre-apropos" data-clair>
       <h2 id="titre-apropos" class="section-titre">À propos</h2>
       <div class="bloc-apropos">
-        <p><strong>Je suis Jean-François Duval</strong>, intégrateur web passionné par le design intelligent, les
-          technologies modernes et les solutions qui ont du sens.</p>
+        <p><strong>Je suis Jean-François Duval</strong>, développeur full stack TypeScript et fondateur de <strong>Propulsion Numérique</strong> et de <strong>DonkeyNote</strong> à Québec.</p>
 
-        <p>Mon parcours m’a appris à bâtir des interfaces cohérentes, à structurer du contenu avec précision, et à
-          penser chaque projet comme une expérience. J’aime que le design soit clair, beau, mais surtout utile. Ce que
-          je construis doit fonctionner simplement, et bien — pour tous les écrans, tous les contextes.</p>
+        <p>En parallèle de mon poste au gouvernement du Québec (MELCCFP, après le MAMH), j'ai bâti et mis en production plusieurs produits complets : le SaaS <strong>DonkeyNote</strong> (<a href="https://donkeynote.app" target="_blank" rel="noopener noreferrer">https://donkeynote.app</a>), le site et les moteurs logiciels de mon agence <strong>Propulsion Numérique</strong> (<a href="https://propulsion-numerique.ca" target="_blank" rel="noopener noreferrer">https://propulsion-numerique.ca</a>) ainsi que la plateforme et le calendrier d'entretien par IA du garage <strong>Certi-Pro</strong> (<a href="https://certi-pro.ca" target="_blank" rel="noopener noreferrer">https://certi-pro.ca</a>).</p>
 
-        <p>J’ai un fort intérêt pour l’expérience utilisateur, l’animation fluide, les micro-interactions bien dosées,
-          les composants soignés. Je m’appuie sur une base solide en <strong>HTML</strong>, <strong>CSS</strong> et
-          <strong>JavaScript vanilla</strong>, que je fais évoluer avec curiosité : outils modernes, intégration d’IA,
-          automatisation intelligente.
-        </p>
-        <p>J'ai exploré <strong>React.js</strong> et <strong>Vue.js</strong> et je suis actuellement en train de
-          commencer mon apprentissage de <strong>Angular.js</strong>.</p>
-
-        <p>Je cherche maintenant à contribuer à des projets tournés vers l’innovation, à la croisée du
-          <strong>développement web</strong>, de l’<strong>UX design</strong> et de la <strong>technologie
-            émergente</strong>. Avec sérieux, esprit d’équipe et une volonté constante d’apprendre.
-        </p>
+        <p>Je travaille quotidiennement avec plusieurs agents de programmation en parallèle (Claude Code, Cursor, Codex, Gemini), encadrés par 33 protocoles écrits, des revues croisées systématiques et des suites de tests automatisés rigoureuses. Pour moi, l'IA qualifie et rédige là où elle excelle, mais le code garde toujours le dernier mot sur la logique critique, la sécurité et les données.</p>
       </div>
     </section>
 
     <section id="cv" aria-labelledby="titre-cv" data-clair>
-      <h2 id="titre-cv" class="section-titre">CV et profils</h2>
-      <p>
-        📄 <strong>CV :</strong>
-        <a href="https://jeffduval1.github.io/cv-jf-duval/" target="_blank">Consulter en ligne</a> |
-        <a href="documents/cv-jfduval.pdf" download>Télécharger (PDF)</a>
-      </p>
-      <p>
-        <span aria-hidden="true">🔗</span>
-        LinkedIn :
-        <a href="https://www.linkedin.com/in/jean-francois-duval-web" target="_blank" rel="noopener noreferrer">
-          Voir le profil
-        </a>
-      </p>
-      <p>
-        <span aria-hidden="true">💻</span>
-        GitHub :
-        <a href="https://github.com/jeffduval1" target="_blank" rel="noopener noreferrer">
-          Voir le profil
-        </a>
-      </p>
-
+      <h2 id="titre-cv" class="section-titre">CV, montages vidéo et profils</h2>
+      <div class="grille-liens-profil">
+        <p>
+          📄 <strong>CV :</strong>
+          <a href="https://jeffduval1.github.io/cv-jf-duval/" target="_blank" rel="noopener noreferrer">Consulter en ligne</a> |
+          <a href="documents/cv-jfduval.pdf" download>Télécharger (PDF)</a>
+        </p>
+        <p>
+          🎬 <strong>Montages vidéo récents (16:9 et 9:16) :</strong>
+          <a href="https://1drv.ms/f/c/5f18c55ff03c8e9d/IgB4XdKOYRT3R7EL2zRr6CiNAWuEsrrYtdZXUw7FrZQ0P9o?e=lAoPhI" target="_blank" rel="noopener noreferrer">
+            Ouvrir le dossier OneDrive partagé
+          </a>
+        </p>
+        <p>
+          <span aria-hidden="true">💻</span>
+          <strong>GitHub :</strong>
+          <a href="https://github.com/jeffduval1" target="_blank" rel="noopener noreferrer">
+            https://github.com/jeffduval1
+          </a>
+        </p>
+        <p>
+          <span aria-hidden="true">🔗</span>
+          <strong>LinkedIn :</strong>
+          <a href="https://www.linkedin.com/in/jean-francois-duval-web" target="_blank" rel="noopener noreferrer">
+            Voir le profil LinkedIn
+          </a>
+        </p>
+      </div>
     </section>
 
     <section id="contact" aria-labelledby="titre-contact" data-clair>
@@ -265,7 +336,7 @@
       </p>
       <p>
         <span aria-hidden="true">📞</span>
-        418.554.5828
+        418 554-5828
       </p>
       <div class="ctnForm">
         <form class="formulaire-contact" action="https://formspree.io/f/mrblqggp" method="POST">
@@ -288,7 +359,7 @@
   </main>
 
   <footer>
-    <p>&copy; Jean-François Duval – Intégrateur Web</p>
+    <p>&copy; 2026 Jean-François Duval · Développeur full stack TypeScript · IA et agents de programmation</p>
   </footer>
   <script src="main.js" defer></script>
   <div id="modal-image" class="modal-image hidden">
