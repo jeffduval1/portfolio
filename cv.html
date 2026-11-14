@@ -203,7 +203,7 @@
         <h4>Intégrations, IA et agents de programmation</h4>
         <ul>
             <li><strong>Modèles et API d'IA en production :</strong> SDK Anthropic (Claude Sonnet 4.6, Haiku 4.5), SDK OpenAI (GPT-4o-mini, Whisper), prompts versionnés, suivi des coûts en dollars</li>
-            <li><strong>Direction d'agents en parallèle :</strong> Claude Code (Anthropic) et Cursor en plans principaux au quotidien ; OpenAI Codex et Google Gemini en plans Pro pour la contre-vérification et les revues croisées</li>
+            <li><strong>Direction d'agents en parallèle (3 à 7 fils simultanés) :</strong> plan Max avec Claude (Anthropic), plans équivalents avec Cursor et Google Gemini, et plan Pro avec OpenAI Codex ; utilisation intensive de plusieurs agents à la fois avec contre-vérification et revues croisées</li>
             <li><strong>Encadrement des agents :</strong> 33 protocoles écrits avec phrases de déclenchement, fichier <code>CLAUDE.md</code> par projet, hooks de pré-validation, index des erreurs par symptôme et registre des sujets déjà tranchés</li>
             <li><strong>Connexion, paiement et services :</strong> Clerk, Stripe (abonnements, achats à l'unité, webhooks signés), Microsoft Graph (OAuth Outlook), AWS SES v2 et S3, Postmark, Resend, Twilio, Web Push</li>
         </ul>
